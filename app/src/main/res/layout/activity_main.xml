@@ -28,5 +28,10 @@
         android:textSize="30sp"/>
 
   </android.support.v7.widget.Toolbar>
+
+  <ImageView
+      android:layout_width="150dp"
+      android:layout_height="150dp"
+      android:src="@drawable/ic_mario"/>
   
 </LinearLayout>
