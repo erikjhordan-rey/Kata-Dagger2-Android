@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="io.github.erikcaffrey.kata_dagger2_mariokart.MainActivity">
+
+  <android.support.v7.widget.Toolbar
+      android:layout_width="match_parent"
+      android:layout_height="?actionBarSize"
+      android:background="@color/colorPrimary"
+      android:popupTheme="@style/AppTheme.PopupOverlay"
+      android:theme="@style/AppTheme.AppBarOverlay"
+      app:contentInsetLeft="0dp"
+      app:contentInsetStart="0dp">
+
+    <io.github.erikcaffrey.kata_dagger2_mariokart.LabelTitle
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="Mario Kart"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"/>
+
+  </android.support.v7.widget.Toolbar>
+  
+</LinearLayout>
