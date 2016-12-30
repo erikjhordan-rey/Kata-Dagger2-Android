@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="io.github.erikcaffrey.kata_dagger2_mariokart.MainActivity">
+    tools:context="io.github.erikcaffrey.kata_dagger2_mariokart.view.ui.CharacterActivity">
 
   <android.support.v7.widget.Toolbar
       android:layout_width="match_parent"
@@ -18,7 +18,7 @@
       app:contentInsetLeft="0dp"
       app:contentInsetStart="0dp">
 
-    <io.github.erikcaffrey.kata_dagger2_mariokart.LabelTitle
+    <io.github.erikcaffrey.kata_dagger2_mariokart.view.widget.MarioKartLabel
         android:id="@+id/text"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -33,5 +33,12 @@
       android:layout_width="150dp"
       android:layout_height="150dp"
       android:src="@drawable/ic_mario"/>
+
+  <ProgressBar
+      android:id="@+id/pb"
+      android:layout_width="250dp"
+      android:layout_height="wrap_content"
+      style="@android:style/Widget.Holo.Light.ProgressBar.Horizontal"
+      />
   
 </LinearLayout>
