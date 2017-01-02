@@ -5,24 +5,22 @@ import rx.Subscriber;
 import rx.Subscription;
 import rx.subscriptions.Subscriptions;
 
-abstract class UseCase {
+@SuppressWarnings("unchecked") abstract class UseCase {
 
-    private Subscription subscription = Subscriptions.empty();
+  private Subscription subscription = Subscriptions.empty();
 
-    UseCase() {
+  UseCase() {
+  }
+
+  public void execute(Subscriber UseCaseSubscriber) {
+    this.subscription = this.buildObservableUseCase().subscribe(UseCaseSubscriber);
+  }
+
+  public void unsubscribe() {
+    if (!subscription.isUnsubscribed()) {
+      subscription.unsubscribe();
     }
+  }
 
-    @SuppressWarnings("unchecked")
-    public void execute(Subscriber UseCaseSubscriber) {
-        this.subscription = this.buildObservableUseCase()
-                .subscribe(UseCaseSubscriber);
-    }
-
-    public void unsubscribe() {
-        if (!subscription.isUnsubscribed()) {
-            subscription.unsubscribe();
-        }
-    }
-
-    protected abstract Observable buildObservableUseCase();
+  protected abstract Observable buildObservableUseCase();
 }

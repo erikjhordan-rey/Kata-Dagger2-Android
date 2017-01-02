@@ -13,20 +13,26 @@ import io.github.erikcaffrey.kata_dagger2_mariokart.domain.usecase.GetCharacters
 
 public class CharacterActivity extends AppCompatActivity implements CharactersPresenter.View {
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        GetCharacters getCharacters =
-                new GetCharacters(new CharacterRepository(new CharacterFakeDataSource()));
-        CharactersPresenter charactersPresenter = new CharactersPresenter(this, getCharacters);
-        charactersPresenter.init();
-    }
+  @Override protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_main);
+    GetCharacters getCharacters =
+        new GetCharacters(new CharacterRepository(new CharacterFakeDataSource()));
+    CharactersPresenter charactersPresenter = new CharactersPresenter(this, getCharacters);
+    charactersPresenter.initialize();
+  }
 
-    @Override
-    public void showCharacters(List<Character> characters) {
-        for (Character character : characters) {
-            System.out.println(character.getName());
-        }
+  @Override public void showCharacters(List<Character> characters) {
+    for (Character character : characters) {
+      System.out.println(character.getName());
     }
+  }
+
+  @Override public void showLoading() {
+
+  }
+
+  @Override public void hideLoading() {
+
+  }
 }
