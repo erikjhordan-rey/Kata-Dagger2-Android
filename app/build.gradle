@@ -25,8 +25,8 @@ dependencies {
     exclude group: 'com.android.support', module: 'support-annotations'
   })
 
-  compile 'io.reactivex:rxandroid:1.2.1'
-  compile 'io.reactivex:rxjava:1.1.6'
+  compile 'io.reactivex.rxjava2:rxjava:2.0.2'
+  compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
 
   compile 'com.android.support:appcompat-v7:25.0.1'
   testCompile 'junit:junit:4.12'

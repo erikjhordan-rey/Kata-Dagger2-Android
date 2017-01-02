@@ -2,7 +2,7 @@ package io.github.erikcaffrey.kata_dagger2_mariokart.view.ui;
 
 import io.github.erikcaffrey.kata_dagger2_mariokart.domain.model.Character;
 import io.github.erikcaffrey.kata_dagger2_mariokart.domain.usecase.GetCharacterByName;
-import io.github.erikcaffrey.kata_dagger2_mariokart.domain.usecase.UseCaseSubscriber;
+import io.github.erikcaffrey.kata_dagger2_mariokart.domain.usecase.UseCaseObserver;
 
 public class CharacterDetailPresenter extends Presenter<CharacterDetailPresenter.View> {
 
@@ -12,20 +12,21 @@ public class CharacterDetailPresenter extends Presenter<CharacterDetailPresenter
     this.getCharacterByName = getCharacterByName;
   }
 
-  @Override public void initialize() {
+  @SuppressWarnings("unchecked") @Override public void initialize() {
     super.initialize();
-    getCharacterByName.execute(new GetCharacterSubscriber());
+    getCharacterByName.execute(new GetCharacterObserver());
   }
 
   @Override public void terminate() {
     super.terminate();
-    getCharacterByName.unsubscribe();
+    getCharacterByName.dispose();
+    setView(null);
   }
 
-  private class GetCharacterSubscriber extends UseCaseSubscriber<Character> {
+  private class GetCharacterObserver extends UseCaseObserver<Character> {
 
-    @Override public void onCompleted() {
-      super.onCompleted();
+    @Override public void onComplete() {
+      super.onComplete();
     }
 
     @Override public void onError(Throwable e) {
@@ -34,6 +35,7 @@ public class CharacterDetailPresenter extends Presenter<CharacterDetailPresenter
 
     @Override public void onNext(Character character) {
       super.onNext(character);
+      getView().showCharacter(character);
     }
   }
 

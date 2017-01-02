@@ -1,26 +1,28 @@
 package io.github.erikcaffrey.kata_dagger2_mariokart.domain.usecase;
 
-import rx.Observable;
-import rx.Subscriber;
-import rx.Subscription;
-import rx.subscriptions.Subscriptions;
+import io.reactivex.Observable;
+import io.reactivex.disposables.CompositeDisposable;
+import io.reactivex.observers.DisposableObserver;
 
-@SuppressWarnings("unchecked") abstract class UseCase {
+abstract class UseCase<T> {
 
-  private Subscription subscription = Subscriptions.empty();
+  private final CompositeDisposable compositeDisposable;
 
   UseCase() {
+    compositeDisposable = new CompositeDisposable();
   }
 
-  public void execute(Subscriber UseCaseSubscriber) {
-    this.subscription = this.buildObservableUseCase().subscribe(UseCaseSubscriber);
+  public void execute(DisposableObserver<T> disposableObserver) {
+    final Observable<T> observable = this.buildUseCaseObservable();
+    DisposableObserver observer = observable.subscribeWith(disposableObserver);
+    compositeDisposable.add(observer);
   }
 
-  public void unsubscribe() {
-    if (!subscription.isUnsubscribed()) {
-      subscription.unsubscribe();
+  public void dispose() {
+    if (!compositeDisposable.isDisposed()) {
+      compositeDisposable.dispose();
     }
   }
 
-  protected abstract Observable buildObservableUseCase();
+  abstract Observable<T> buildUseCaseObservable();
 }

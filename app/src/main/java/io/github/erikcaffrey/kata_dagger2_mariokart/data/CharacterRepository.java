@@ -1,10 +1,11 @@
 package io.github.erikcaffrey.kata_dagger2_mariokart.data;
 
+import io.reactivex.Observable;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import io.github.erikcaffrey.kata_dagger2_mariokart.domain.model.Character;
-import rx.Observable;
+
 
 public class CharacterRepository {
 

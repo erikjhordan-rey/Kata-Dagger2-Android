@@ -1,7 +1,7 @@
 package io.github.erikcaffrey.kata_dagger2_mariokart.domain.usecase;
 
 import io.github.erikcaffrey.kata_dagger2_mariokart.data.CharacterRepository;
-import rx.Observable;
+import io.reactivex.Observable;
 
 public class GetCharacterByName extends UseCase {
 
@@ -13,7 +13,7 @@ public class GetCharacterByName extends UseCase {
     this.characterRepository = characterRepository;
   }
 
-  @Override protected Observable buildObservableUseCase() {
+  @Override Observable buildUseCaseObservable() {
     return this.characterRepository.getByName(characterName);
   }
 }

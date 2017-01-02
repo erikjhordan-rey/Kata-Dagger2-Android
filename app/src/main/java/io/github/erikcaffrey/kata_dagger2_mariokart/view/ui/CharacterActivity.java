@@ -18,7 +18,8 @@ public class CharacterActivity extends AppCompatActivity implements CharactersPr
     setContentView(R.layout.activity_main);
     GetCharacters getCharacters =
         new GetCharacters(new CharacterRepository(new CharacterFakeDataSource()));
-    CharactersPresenter charactersPresenter = new CharactersPresenter(this, getCharacters);
+    CharactersPresenter charactersPresenter = new CharactersPresenter(getCharacters);
+    charactersPresenter.setView(this);
     charactersPresenter.initialize();
   }
 
