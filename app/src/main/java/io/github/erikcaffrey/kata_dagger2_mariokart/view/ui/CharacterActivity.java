@@ -1,21 +1,21 @@
 package io.github.erikcaffrey.kata_dagger2_mariokart.view.ui;
 
-import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-
-import java.util.List;
-
 import io.github.erikcaffrey.kata_dagger2_mariokart.R;
 import io.github.erikcaffrey.kata_dagger2_mariokart.data.CharacterFakeDataSource;
 import io.github.erikcaffrey.kata_dagger2_mariokart.data.CharacterRepository;
 import io.github.erikcaffrey.kata_dagger2_mariokart.domain.model.Character;
 import io.github.erikcaffrey.kata_dagger2_mariokart.domain.usecase.GetCharacters;
+import java.util.List;
 
-public class CharacterActivity extends AppCompatActivity implements CharactersPresenter.View {
+public class CharacterActivity extends BaseActivity implements CharactersPresenter.View {
 
-  @Override protected void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
-    setContentView(R.layout.activity_main);
+  @Override protected int getLayoutResID() {
+    return R.layout.activity_main;
+  }
+
+  @Override protected void onPrepareActivity() {
+    super.onPrepareActivity();
+
     GetCharacters getCharacters =
         new GetCharacters(new CharacterRepository(new CharacterFakeDataSource()));
     CharactersPresenter charactersPresenter = new CharactersPresenter(getCharacters);
