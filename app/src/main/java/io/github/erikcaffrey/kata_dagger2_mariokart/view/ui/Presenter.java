@@ -22,9 +22,5 @@ class Presenter<T extends Presenter.View> {
 
   public interface View {
 
-    void showLoading();
-
-    void hideLoading();
-
   }
 }

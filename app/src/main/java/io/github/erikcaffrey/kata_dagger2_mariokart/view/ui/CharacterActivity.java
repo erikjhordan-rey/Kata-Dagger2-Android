@@ -29,11 +29,4 @@ public class CharacterActivity extends BaseActivity implements CharactersPresent
     }
   }
 
-  @Override public void showLoading() {
-
-  }
-
-  @Override public void hideLoading() {
-
-  }
 }
