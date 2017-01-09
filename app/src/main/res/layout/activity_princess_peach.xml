@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+  <android.support.v7.widget.Toolbar
+      android:id="@+id/toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="?actionBarSize"
+      android:background="@color/colorPrimary"
+      android:theme="@style/AppTheme.AppBarOverlay"/>
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_below="@+id/toolbar"
+      android:background="@color/colorPrimary"
+      android:gravity="center"
+      android:orientation="vertical">
+
+
+    <io.github.erikcaffrey.kata_dagger2_mariokart.view.widget.MarioKartLabel
+        android:id="@+id/label_peach"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="@android:color/primary_text_dark"
+        android:textSize="30sp"/>
+
+    <ImageView
+        android:id="@+id/picture_peach"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="16dp"/>
+
+  </LinearLayout>
+
+</RelativeLayout>

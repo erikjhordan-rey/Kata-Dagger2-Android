@@ -7,6 +7,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import butterknife.ButterKnife;
 import io.github.erikcaffrey.kata_dagger2_mariokart.R;
 
 public abstract class BaseActivity extends AppCompatActivity implements Presenter.View {
@@ -17,6 +18,7 @@ public abstract class BaseActivity extends AppCompatActivity implements Presente
     super.onCreate(savedInstanceState);
     setContentView(getLayoutResID());
     onPrepareSupportActionBar();
+    bindViews();
     onPreparePresenter();
     onPrepareActivity();
   }
@@ -62,6 +64,13 @@ public abstract class BaseActivity extends AppCompatActivity implements Presente
 
   protected void onPreparePresenter() {
 
+  }
+
+  /**
+   * Every object annotated with {@link butterknife.BindView} its gonna injected trough butterknife
+   */
+  private void bindViews() {
+    ButterKnife.bind(this);
   }
 
   /**
