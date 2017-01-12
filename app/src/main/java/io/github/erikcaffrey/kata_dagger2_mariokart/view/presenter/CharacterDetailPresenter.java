@@ -1,4 +1,4 @@
-package io.github.erikcaffrey.kata_dagger2_mariokart.view.ui;
+package io.github.erikcaffrey.kata_dagger2_mariokart.view.presenter;
 
 import io.github.erikcaffrey.kata_dagger2_mariokart.domain.model.Character;
 import io.github.erikcaffrey.kata_dagger2_mariokart.domain.usecase.GetCharacterByName;

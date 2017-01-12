@@ -1,4 +1,4 @@
-package io.github.erikcaffrey.kata_dagger2_mariokart.view.ui;
+package io.github.erikcaffrey.kata_dagger2_mariokart.view.presenter;
 
 import io.github.erikcaffrey.kata_dagger2_mariokart.domain.model.Character;
 import io.github.erikcaffrey.kata_dagger2_mariokart.domain.usecase.GetCharacters;
@@ -9,7 +9,7 @@ public class CharactersPresenter extends Presenter<CharactersPresenter.View> {
 
   private GetCharacters getCharacters;
 
-  CharactersPresenter(GetCharacters getCharacters) {
+  public CharactersPresenter(GetCharacters getCharacters) {
     this.getCharacters = getCharacters;
   }
 

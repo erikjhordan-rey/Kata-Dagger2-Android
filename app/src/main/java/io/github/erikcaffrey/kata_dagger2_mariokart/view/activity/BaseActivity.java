@@ -1,4 +1,4 @@
-package io.github.erikcaffrey.kata_dagger2_mariokart.view.ui;
+package io.github.erikcaffrey.kata_dagger2_mariokart.view.activity;
 
 import android.os.Bundle;
 import android.support.annotation.LayoutRes;
@@ -7,7 +7,9 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import butterknife.ButterKnife;
 import io.github.erikcaffrey.kata_dagger2_mariokart.R;
+import io.github.erikcaffrey.kata_dagger2_mariokart.view.presenter.Presenter;
 
 public abstract class BaseActivity extends AppCompatActivity implements Presenter.View {
 
@@ -17,6 +19,7 @@ public abstract class BaseActivity extends AppCompatActivity implements Presente
     super.onCreate(savedInstanceState);
     setContentView(getLayoutResID());
     onPrepareSupportActionBar();
+    bindViews();
     onPreparePresenter();
     onPrepareActivity();
   }
@@ -65,10 +68,18 @@ public abstract class BaseActivity extends AppCompatActivity implements Presente
   }
 
   /**
+   * Every object annotated with {@link butterknife.BindView} its gonna injected trough butterknife
+   */
+
+  private void bindViews() {
+    ButterKnife.bind(this);
+  }
+
+  /**
    * @return Toolbar if you need configure directly the toolbar
    */
 
-  @Nullable protected Toolbar getBaseToolbar() {
+  @Nullable public Toolbar getBaseToolbar() {
     return toolbar;
   }
 
