@@ -1,6 +1,6 @@
-package io.github.erikcaffrey.kata_dagger2_mariokart.view.ui;
+package io.github.erikcaffrey.kata_dagger2_mariokart.view.presenter;
 
-class Presenter<T extends Presenter.View> {
+public class Presenter<T extends Presenter.View> {
 
   private T view;
 
@@ -16,15 +16,11 @@ class Presenter<T extends Presenter.View> {
 
   }
 
-  public void terminate(){
+  public void terminate() {
 
   }
 
   public interface View {
-
-    void showLoading();
-
-    void hideLoading();
 
   }
 }

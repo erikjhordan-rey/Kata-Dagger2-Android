@@ -1,3 +1,4 @@
 <resources>
-  <string name="app_name">Kata-Dagger2-MarioKart</string>
+  <string name="app_name">Kata Dagger2</string>
+  <string name="app_title">MarioKart</string>
 </resources>

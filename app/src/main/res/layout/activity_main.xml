@@ -1,44 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<android.support.design.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main"
     android:layout_width="match_parent"
+    android:background="@color/colorPrimary"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="io.github.erikcaffrey.kata_dagger2_mariokart.view.ui.CharacterActivity">
-
+    android:fitsSystemWindows="true"
+>
   <android.support.v7.widget.Toolbar
       android:layout_width="match_parent"
       android:layout_height="?actionBarSize"
       android:background="@color/colorPrimary"
-      android:popupTheme="@style/AppTheme.PopupOverlay"
       android:theme="@style/AppTheme.AppBarOverlay"
       app:contentInsetLeft="0dp"
       app:contentInsetStart="0dp">
 
     <io.github.erikcaffrey.kata_dagger2_mariokart.view.widget.MarioKartLabel
-        android:id="@+id/text"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:text="Mario Kart"
+        android:text="@string/app_name"
         android:textColor="@android:color/white"
         android:textSize="30sp"/>
 
   </android.support.v7.widget.Toolbar>
 
-  <ImageView
-      android:layout_width="150dp"
-      android:layout_height="150dp"
-      android:src="@drawable/ic_mario"/>
+  <android.support.v4.view.ViewPager
+      android:id="@+id/view_pager"
+      android:layout_width="match_parent"
+      android:layout_height="330dp"
+      android:layout_gravity="bottom"
+      android:clipToPadding="false"
+      android:overScrollMode="never"
+      android:paddingBottom="16dp"
+      android:paddingEnd="60dp"
+      android:paddingLeft="60dp"
+      android:paddingRight="60dp"
+      android:paddingStart="60dp"/>
 
-  <ProgressBar
-      android:id="@+id/pb"
-      android:layout_width="250dp"
-      android:layout_height="wrap_content"
-      style="@android:style/Widget.Holo.Light.ProgressBar.Horizontal"
-      />
-  
-</LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>
