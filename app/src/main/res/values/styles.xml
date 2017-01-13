@@ -18,8 +18,19 @@
 
   <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
 
-  <style name="ButtonStyle" parent="Base.Widget.AppCompat.Button.Colored">
-    <item name="colorButtonNormal">@color/colorAccent</item>
+  <style name="MyButton" parent="Theme.AppCompat.Light">
+    <item name="colorControlNormal">#D9002A</item>
   </style>
 
+  <style name="AppTheme.LoginButton">
+    <item name="android:textColor">#D9002A</item>
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">56dp</item>
+    <item name="android:textAllCaps">true</item>
+    <item name="android:textSize">14sp</item>
+  </style>
+
+  <style name="SignUpSecondaryButton" parent="Theme.AppCompat">
+    <item name="colorButtonNormal">@android:color/white</item>
+  </style>
 </resources>

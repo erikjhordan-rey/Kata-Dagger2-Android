@@ -17,45 +17,43 @@
 package io.github.erikcaffrey.kata_dagger2_mariokart.view.activity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
-import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
+import android.view.View;
 import butterknife.BindView;
 import io.github.erikcaffrey.kata_dagger2_mariokart.R;
 import io.github.erikcaffrey.kata_dagger2_mariokart.data.CharacterFakeDataSource;
 import io.github.erikcaffrey.kata_dagger2_mariokart.data.CharacterRepository;
 import io.github.erikcaffrey.kata_dagger2_mariokart.domain.model.Character;
 import io.github.erikcaffrey.kata_dagger2_mariokart.domain.usecase.GetCharacters;
-import io.github.erikcaffrey.kata_dagger2_mariokart.view.adapter.CharacterPagerAdapter;
+import io.github.erikcaffrey.kata_dagger2_mariokart.view.adapter.CharacterDetailPagerAdapter;
+import io.github.erikcaffrey.kata_dagger2_mariokart.view.fragment.CharacterDetailFragment;
 import io.github.erikcaffrey.kata_dagger2_mariokart.view.fragment.CharacterFragment;
 import io.github.erikcaffrey.kata_dagger2_mariokart.view.presenter.CharactersPresenter;
-import io.github.erikcaffrey.kata_dagger2_mariokart.view.widget.MarioTransformer;
 import java.util.List;
 
-public class CharacterActivity extends BaseActivity implements CharactersPresenter.View {
+public class CharacterDetailActivity extends BaseActivity implements CharactersPresenter.View {
 
-  @BindView(R.id.view_pager) ViewPager pager;
+  @BindView(R.id.pager) ViewPager pager;
 
-  private CharacterPagerAdapter characterPagerAdapter;
-  private MarioTransformer marioTransformer;
+  private CharacterDetailPagerAdapter characterPagerAdapter;
 
   @Override protected int getLayoutResID() {
-    return R.layout.activity_characters;
+    return R.layout.activity_detail_character;
   }
 
   @Override protected void onSetupSupportActionBar(@NonNull ActionBar actionBar) {
     super.onSetupSupportActionBar(actionBar);
-    actionBar.setDisplayShowTitleEnabled(false);
-    actionBar.setIcon(ContextCompat.getDrawable(this, R.drawable.ic_menu_white_24dp));
+    actionBar.setDisplayShowTitleEnabled(true);
+    actionBar.setDisplayHomeAsUpEnabled(true);
   }
 
   @Override protected void onPrepareActivity() {
     super.onPrepareActivity();
 
-    characterPagerAdapter =
-        new CharacterPagerAdapter(getSupportFragmentManager(), dpToPixels(2, this));
-    marioTransformer = new MarioTransformer(pager, characterPagerAdapter);
+    characterPagerAdapter = new CharacterDetailPagerAdapter(getSupportFragmentManager());
     pager.setAdapter(characterPagerAdapter);
 
     CharacterFakeDataSource characterFakeDataSource = new CharacterFakeDataSource();
@@ -68,16 +66,20 @@ public class CharacterActivity extends BaseActivity implements CharactersPresent
 
   @Override public void showCharacters(List<Character> characters) {
     for (Character character : characters) {
-      CharacterFragment characterFragment = CharacterFragment.newInstance(character);
+      CharacterDetailFragment characterFragment = CharacterDetailFragment.newInstance(character);
       characterPagerAdapter.addCharacter(characterFragment);
       characterPagerAdapter.notifyDataSetChanged();
       System.out.println(character.getName());
     }
-    pager.setPageTransformer(false, marioTransformer);
-    marioTransformer.enableScaling(true);
+
+    pager.setCurrentItem(getIntent().getIntExtra(CharacterFragment.EXTRA_CHARACTER_POSITION,0));
+    pager.setVisibility(View.VISIBLE);
+
   }
 
-  public static float dpToPixels(int dp, Context context) {
-    return dp * (context.getResources().getDisplayMetrics().density);
+  public static Intent getCallingIntent(Context context, int position) {
+    Intent intent = new Intent(context, CharacterDetailActivity.class);
+    intent.putExtra(CharacterFragment.EXTRA_CHARACTER_POSITION,position);
+    return intent;
   }
 }

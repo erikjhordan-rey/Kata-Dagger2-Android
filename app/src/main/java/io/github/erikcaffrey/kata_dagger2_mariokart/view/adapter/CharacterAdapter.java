@@ -14,18 +14,17 @@
  * limitations under the License.
  */
 
-package io.github.erikcaffrey.kata_dagger2_mariokart.domain.usecase;
+package io.github.erikcaffrey.kata_dagger2_mariokart.view.adapter;
 
-import io.reactivex.observers.DisposableObserver;
+import android.support.v7.widget.CardView;
 
-public abstract class UseCaseObserver<T> extends DisposableObserver<T> {
+public interface CharacterAdapter {
 
-  @Override public void onComplete() {
-  }
+  int MAX_ELEVATION = 8;
 
-  @Override public void onError(Throwable e) {
-  }
+  float getElevation();
 
-  @Override public void onNext(T t) {
-  }
+  CardView getCardViewAt(int position);
+
+  int getCount();
 }

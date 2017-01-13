@@ -3,40 +3,49 @@
     android:id="@+id/cardView"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_gravity="center"
     app:cardUseCompatPadding="true"
-    android:layout_gravity="center">
+    >
 
 
-  <LinearLayout
+  <RelativeLayout
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:gravity="center"
-      android:orientation="vertical"
-      android:padding="8dp">
+      android:background="@color/colorAccent"
+      android:padding="16dp"
+      >
 
-
-    <TextView
-        android:id="@+id/label_name"
+    <io.github.erikcaffrey.kata_dagger2_mariokart.view.widget.MarioKartLabel
+        android:id="@+id/label_position"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Card title"
-        style="@style/TextAppearance.AppCompat.Title"/>
-
+        android:layout_gravity="start|center|top"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="32sp"
+        />
     <ImageView
-        android:id="@+id/image_cover"
+        android:id="@+id/image_profile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:scaleType="fitCenter"
-        android:padding="16dp"
-        android:src="@mipmap/mario"/>
+        android:layout_above="@+id/button_name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/ic_bowser"
+        />
+
 
     <Button
-        style="@style/ButtonStyle"
+        android:id="@+id/button_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="start" />
+        android:layout_alignParentBottom="true"
+        style="@style/AppTheme.LoginButton"
+        android:layout_marginBottom="16dp"
+        android:theme="@style/SignUpSecondaryButton"
+        />
 
-  </LinearLayout>
+
+  </RelativeLayout>
 
 </android.support.v7.widget.CardView>
