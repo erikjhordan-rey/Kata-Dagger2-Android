@@ -22,17 +22,17 @@ import java.util.List;
 
 import io.github.erikcaffrey.kata_dagger2_mariokart.domain.model.Abilities;
 import io.github.erikcaffrey.kata_dagger2_mariokart.domain.model.Character;
+import javax.inject.Singleton;
 
-public class CharacterFakeDataSource {
+public class CharacterFakeDataSource implements DataSource {
 
-  public static final int CHARACTER_FAKE_DATA_SIZE = 8;
   private final List<Character> characters;
 
   public CharacterFakeDataSource() {
     this.characters = new LinkedList<>();
   }
 
-  List<Character> provideCharacterList() {
+  @Override public List<Character> provideCharacterList() {
     addCharacter(getMarioBros());
     addCharacter(getLuigi());
     addCharacter(getDaisy());

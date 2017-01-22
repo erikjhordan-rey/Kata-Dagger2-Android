@@ -24,6 +24,7 @@ import android.support.v7.app.ActionBar;
 import android.view.View;
 import butterknife.BindView;
 import io.github.erikcaffrey.kata_dagger2_mariokart.R;
+import io.github.erikcaffrey.kata_dagger2_mariokart.SuperMarioKartApplication;
 import io.github.erikcaffrey.kata_dagger2_mariokart.data.CharacterFakeDataSource;
 import io.github.erikcaffrey.kata_dagger2_mariokart.data.CharacterRepository;
 import io.github.erikcaffrey.kata_dagger2_mariokart.domain.model.Character;
@@ -33,12 +34,15 @@ import io.github.erikcaffrey.kata_dagger2_mariokart.view.fragment.CharacterDetai
 import io.github.erikcaffrey.kata_dagger2_mariokart.view.fragment.CharacterFragment;
 import io.github.erikcaffrey.kata_dagger2_mariokart.view.presenter.CharactersPresenter;
 import java.util.List;
+import javax.inject.Inject;
 
 public class CharacterDetailActivity extends BaseActivity implements CharactersPresenter.View {
 
   @BindView(R.id.pager) ViewPager pager;
 
   private CharacterDetailPagerAdapter characterPagerAdapter;
+
+  @Inject CharactersPresenter charactersPresenter;
 
   @Override protected int getLayoutResID() {
     return R.layout.activity_detail_character;
@@ -52,14 +56,12 @@ public class CharacterDetailActivity extends BaseActivity implements CharactersP
 
   @Override protected void onPrepareActivity() {
     super.onPrepareActivity();
+    initializeDagger();
 
     characterPagerAdapter = new CharacterDetailPagerAdapter(getSupportFragmentManager());
     pager.setAdapter(characterPagerAdapter);
 
-    CharacterFakeDataSource characterFakeDataSource = new CharacterFakeDataSource();
-    CharacterRepository characterRepository = new CharacterRepository(characterFakeDataSource);
-    GetCharacters getCharacters = new GetCharacters(characterRepository);
-    CharactersPresenter charactersPresenter = new CharactersPresenter(getCharacters);
+
     charactersPresenter.setView(this);
     charactersPresenter.initialize();
   }
@@ -81,5 +83,10 @@ public class CharacterDetailActivity extends BaseActivity implements CharactersP
     Intent intent = new Intent(context, CharacterDetailActivity.class);
     intent.putExtra(CharacterFragment.EXTRA_CHARACTER_POSITION,position);
     return intent;
+  }
+
+  private void initializeDagger() {
+    SuperMarioKartApplication app = (SuperMarioKartApplication) getApplication();
+    app.getCharactersComponent().inject(this);
   }
 }

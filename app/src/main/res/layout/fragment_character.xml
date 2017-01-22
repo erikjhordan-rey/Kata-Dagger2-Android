@@ -11,7 +11,7 @@
   <RelativeLayout
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:background="@color/colorAccent"
+      android:background="@color/colorPrimary"
       android:padding="16dp"
       >
 
@@ -21,7 +21,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="start|center|top"
         android:gravity="center"
-        android:textColor="@android:color/white"
+        android:textColor="@color/colorPrimaryDark"
         android:textSize="32sp"
         />
     <ImageView
@@ -31,7 +31,7 @@
         android:layout_above="@+id/button_name"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="16dp"
-        android:src="@drawable/ic_bowser"
+        android:padding="8dp"
         />
 
 
@@ -40,9 +40,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        style="@style/AppTheme.LoginButton"
         android:layout_marginBottom="16dp"
         android:theme="@style/SignUpSecondaryButton"
+        style="@style/AppTheme.LoginButton"
         />
 
 

@@ -20,12 +20,13 @@ import io.github.erikcaffrey.kata_dagger2_mariokart.domain.model.Character;
 import io.github.erikcaffrey.kata_dagger2_mariokart.domain.usecase.GetCharacters;
 import io.github.erikcaffrey.kata_dagger2_mariokart.domain.usecase.UseCaseObserver;
 import java.util.List;
+import javax.inject.Inject;
 
 public class CharactersPresenter extends Presenter<CharactersPresenter.View> {
 
   private GetCharacters getCharacters;
 
-  public CharactersPresenter(GetCharacters getCharacters) {
+  @Inject public CharactersPresenter(GetCharacters getCharacters) {
     this.getCharacters = getCharacters;
   }
 
