@@ -39,7 +39,7 @@ public class CharacterActivity extends BaseActivity implements CharactersPresent
   private CharacterPagerAdapter characterPagerAdapter;
   private MarioTransformer marioTransformer;
 
- @Inject CharactersPresenter charactersPresenter;
+  @Inject CharactersPresenter charactersPresenter;
 
   @Override protected int getLayoutResID() {
     return R.layout.activity_characters;
@@ -55,8 +55,8 @@ public class CharacterActivity extends BaseActivity implements CharactersPresent
     super.onPrepareActivity();
     initializeDagger();
 
-    characterPagerAdapter =
-        new CharacterPagerAdapter(getSupportFragmentManager(), dpToPixels(2, this));
+    characterPagerAdapter = new CharacterPagerAdapter(getSupportFragmentManager());
+    characterPagerAdapter.setElevation(dpToPixels(2, this));
     marioTransformer = new MarioTransformer(pager, characterPagerAdapter);
     pager.setAdapter(characterPagerAdapter);
 
@@ -69,7 +69,6 @@ public class CharacterActivity extends BaseActivity implements CharactersPresent
       CharacterFragment characterFragment = CharacterFragment.newInstance(character);
       characterPagerAdapter.addCharacter(characterFragment);
       characterPagerAdapter.notifyDataSetChanged();
-      System.out.println(character.getName());
     }
     pager.setPageTransformer(false, marioTransformer);
     marioTransformer.enableScaling(true);

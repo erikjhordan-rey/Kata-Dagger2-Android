@@ -25,10 +25,7 @@ import android.view.View;
 import butterknife.BindView;
 import io.github.erikcaffrey.kata_dagger2_mariokart.R;
 import io.github.erikcaffrey.kata_dagger2_mariokart.SuperMarioKartApplication;
-import io.github.erikcaffrey.kata_dagger2_mariokart.data.CharacterFakeDataSource;
-import io.github.erikcaffrey.kata_dagger2_mariokart.data.CharacterRepository;
 import io.github.erikcaffrey.kata_dagger2_mariokart.domain.model.Character;
-import io.github.erikcaffrey.kata_dagger2_mariokart.domain.usecase.GetCharacters;
 import io.github.erikcaffrey.kata_dagger2_mariokart.view.adapter.CharacterDetailPagerAdapter;
 import io.github.erikcaffrey.kata_dagger2_mariokart.view.fragment.CharacterDetailFragment;
 import io.github.erikcaffrey.kata_dagger2_mariokart.view.fragment.CharacterFragment;
@@ -61,7 +58,6 @@ public class CharacterDetailActivity extends BaseActivity implements CharactersP
     characterPagerAdapter = new CharacterDetailPagerAdapter(getSupportFragmentManager());
     pager.setAdapter(characterPagerAdapter);
 
-
     charactersPresenter.setView(this);
     charactersPresenter.initialize();
   }
@@ -74,14 +70,13 @@ public class CharacterDetailActivity extends BaseActivity implements CharactersP
       System.out.println(character.getName());
     }
 
-    pager.setCurrentItem(getIntent().getIntExtra(CharacterFragment.EXTRA_CHARACTER_POSITION,0));
+    pager.setCurrentItem(getIntent().getIntExtra(CharacterFragment.EXTRA_CHARACTER_POSITION, 0));
     pager.setVisibility(View.VISIBLE);
-
   }
 
   public static Intent getCallingIntent(Context context, int position) {
     Intent intent = new Intent(context, CharacterDetailActivity.class);
-    intent.putExtra(CharacterFragment.EXTRA_CHARACTER_POSITION,position);
+    intent.putExtra(CharacterFragment.EXTRA_CHARACTER_POSITION, position);
     return intent;
   }
 

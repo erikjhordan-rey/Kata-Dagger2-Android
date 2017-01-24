@@ -35,18 +35,5 @@ public class CharacterRepository implements Repository {
     final int seconds = 2000;
     return Observable.just(characters).delay(seconds, TimeUnit.MILLISECONDS);
   }
-
-  @Override public Observable<Character> getByName(String name) {
-    Character result = null;
-    for (Character character : characters) {
-      if (character.getName().equals(name)) {
-        result = character;
-        break;
-      }
-    }
-
-    assert result != null;
-    return Observable.just(result);
-  }
 }
 

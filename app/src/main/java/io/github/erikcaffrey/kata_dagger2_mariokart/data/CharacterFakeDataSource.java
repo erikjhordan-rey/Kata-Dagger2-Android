@@ -17,12 +17,10 @@
 package io.github.erikcaffrey.kata_dagger2_mariokart.data;
 
 import io.github.erikcaffrey.kata_dagger2_mariokart.R;
-import java.util.LinkedList;
-import java.util.List;
-
 import io.github.erikcaffrey.kata_dagger2_mariokart.domain.model.Abilities;
 import io.github.erikcaffrey.kata_dagger2_mariokart.domain.model.Character;
-import javax.inject.Singleton;
+import java.util.LinkedList;
+import java.util.List;
 
 public class CharacterFakeDataSource implements DataSource {
 

@@ -12,7 +12,9 @@ import io.github.erikcaffrey.kata_dagger2_mariokart.data.Repository;
   @Provides DataSource provideCharacterFakeDataSource() {
     return new CharacterFakeDataSource();
   }
-  @Provides Repository provideCharacterRepository(CharacterRepository characterRepository) {
-    return characterRepository;
+
+  @Provides Repository provideCharacterRepository(DataSource dataSource) {
+    return new CharacterRepository(dataSource);
   }
+
 }

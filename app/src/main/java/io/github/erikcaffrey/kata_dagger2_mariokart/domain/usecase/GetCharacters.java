@@ -16,19 +16,19 @@
 
 package io.github.erikcaffrey.kata_dagger2_mariokart.domain.usecase;
 
-import io.github.erikcaffrey.kata_dagger2_mariokart.data.CharacterRepository;
+import io.github.erikcaffrey.kata_dagger2_mariokart.data.Repository;
 import io.reactivex.Observable;
 import javax.inject.Inject;
 
 public class GetCharacters extends UseCase {
 
-  private final CharacterRepository characterRepository;
+  private final Repository repository;
 
-  @Inject public GetCharacters(CharacterRepository characterRepository) {
-    this.characterRepository = characterRepository;
+  @Inject public GetCharacters(Repository repository) {
+    this.repository = repository;
   }
 
   @Override Observable buildUseCaseObservable() {
-    return characterRepository.getAll();
+    return repository.getAll();
   }
 }

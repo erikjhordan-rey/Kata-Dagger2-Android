@@ -32,11 +32,12 @@ import io.github.erikcaffrey.kata_dagger2_mariokart.view.adapter.CharacterAdapte
 public class CharacterFragment extends BaseFragment {
 
   public static final String EXTRA_CHARACTER_POSITION = "character_position";
+  public static final String EXTRA_CHARACTER = "character";
 
   public static CharacterFragment newInstance(Character character) {
     CharacterFragment characterFragment = new CharacterFragment();
     Bundle bundle = new Bundle();
-    bundle.putSerializable("character", character);
+    bundle.putSerializable(EXTRA_CHARACTER, character);
     characterFragment.setArguments(bundle);
     return characterFragment;
   }
@@ -52,7 +53,7 @@ public class CharacterFragment extends BaseFragment {
 
   @Override protected void onPrepareFragment(@NonNull View view) {
     super.onPrepareFragment(view);
-    final Character character = (Character) getArguments().getSerializable("character");
+    final Character character = (Character) getArguments().getSerializable(EXTRA_CHARACTER);
     nameButton.setText(character.getName());
     profileImage.setImageResource(character.getPhoto());
     positionLabel.setText(character.getId());
@@ -60,9 +61,8 @@ public class CharacterFragment extends BaseFragment {
 
     nameButton.setOnClickListener(new View.OnClickListener() {
       @Override public void onClick(View v) {
-
-        startActivity(CharacterDetailActivity.getCallingIntent(getContext(),
-            Integer.parseInt(character.getId()) - 1));
+        int position = Integer.parseInt(character.getId()) - 1;
+        startActivity(CharacterDetailActivity.getCallingIntent(getContext(), position));
       }
     });
   }

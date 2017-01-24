@@ -7,6 +7,4 @@ import java.util.List;
 public interface Repository {
 
   Observable<List<Character>> getAll();
-
-  Observable<Character> getByName(String name);
 }

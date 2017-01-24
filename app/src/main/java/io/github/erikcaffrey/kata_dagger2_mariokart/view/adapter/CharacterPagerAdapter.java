@@ -30,10 +30,9 @@ public class CharacterPagerAdapter extends FragmentStatePagerAdapter implements 
   private List<Fragment> characterList;
   private float elevation;
 
-  public CharacterPagerAdapter(FragmentManager fm, float elevation) {
+  public CharacterPagerAdapter(FragmentManager fm) {
     super(fm);
     characterList = new ArrayList<>();
-    this.elevation = elevation;
   }
 
   @Override public Fragment getItem(int position) {
@@ -56,6 +55,10 @@ public class CharacterPagerAdapter extends FragmentStatePagerAdapter implements 
     Object fragment = super.instantiateItem(container, position);
     characterList.set(position, (CharacterFragment) fragment);
     return fragment;
+  }
+
+  public void setElevation(float elevation) {
+    this.elevation = elevation;
   }
 
   public void addCharacter(Fragment fragment) {
