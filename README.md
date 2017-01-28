@@ -1,6 +1,7 @@
 # Kata-Dagger2-MarioKart
 
 MarioKart Kata for Android Developers The main goal is to practice Dependency injection using Dagger 2.
+This example was created to support an article explanation [Dagger 2 Kata para android developers][https://erikcaffrey.github.io/ANDROID-kata-dagger2/] (spanish).
 
 ## Screenshots
 
