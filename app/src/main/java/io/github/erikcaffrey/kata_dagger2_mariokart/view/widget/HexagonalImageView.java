@@ -10,23 +10,23 @@ import android.graphics.Region;
 import android.util.AttributeSet;
 import android.widget.ImageView;
 
-public class HexagonMaskView extends ImageView {
+public class HexagonalImageView extends ImageView {
 
   private Path hexagonPath;
   private Path hexagonBorderPath;
   private Paint mBorderPaint;
 
-  public HexagonMaskView(Context context) {
+  public HexagonalImageView(Context context) {
     super(context);
     init();
   }
 
-  public HexagonMaskView(Context context, AttributeSet attrs) {
+  public HexagonalImageView(Context context, AttributeSet attrs) {
     super(context, attrs);
     init();
   }
 
-  public HexagonMaskView(Context context, AttributeSet attrs, int defStyleAttr) {
+  public HexagonalImageView(Context context, AttributeSet attrs, int defStyleAttr) {
     super(context, attrs, defStyleAttr);
     init();
   }
@@ -40,15 +40,6 @@ public class HexagonMaskView extends ImageView {
     this.mBorderPaint.setStrokeCap(Paint.Cap.ROUND);
     this.mBorderPaint.setStrokeWidth(20f);
     this.mBorderPaint.setStyle(Paint.Style.STROKE);
-  }
-
-  public void setRadius(float radius) {
-    calculatePath(radius);
-  }
-
-  public void setBorderColor(int color) {
-    this.mBorderPaint.setColor(color);
-    invalidate();
   }
 
   private void calculatePath(float radius) {
@@ -94,5 +85,14 @@ public class HexagonMaskView extends ImageView {
     int height = MeasureSpec.getSize(heightMeasureSpec);
     setMeasuredDimension(width, height);
     calculatePath(Math.min(width / 2f, height / 2f) - 10f);
+  }
+
+  public void setRadius(float radius) {
+    calculatePath(radius);
+  }
+
+  public void setBorderColor(int color) {
+    this.mBorderPaint.setColor(color);
+    invalidate();
   }
 }

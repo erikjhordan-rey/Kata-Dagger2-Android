@@ -5,10 +5,12 @@ import android.support.annotation.NonNull;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import butterknife.BindView;
 import io.github.erikcaffrey.kata_dagger2_mariokart.R;
 import io.github.erikcaffrey.kata_dagger2_mariokart.domain.model.Character;
+import io.github.erikcaffrey.kata_dagger2_mariokart.view.widget.AbilitieView;
 
 import static io.github.erikcaffrey.kata_dagger2_mariokart.view.fragment.CharacterFragment.EXTRA_CHARACTER;
 
@@ -27,6 +29,12 @@ public class CharacterDetailFragment extends BaseFragment {
   @BindView(R.id.label_name) TextView nameLabel;
   @BindView(R.id.label_description) TextView descriptionLabel;
   @BindView(R.id.toolbar) Toolbar toolbar;
+  @BindView(R.id.abilitie_accelerate) AbilitieView accelerateAbilitie;
+  @BindView(R.id.abilitie_steer) AbilitieView steerAbilitie;
+  @BindView(R.id.abilitie_brake) AbilitieView brakeAbilitie;
+  @BindView(R.id.abilitie_reverse) AbilitieView reverseAbilitie;
+  @BindView(R.id.abilitie_look_behind) AbilitieView lookBehindAbilitie;
+  @BindView(R.id.abilitie_drift) AbilitieView driftAbilitie;
 
   @Override protected int getLayoutResID() {
     return R.layout.fragment_detail_character;
@@ -42,5 +50,11 @@ public class CharacterDetailFragment extends BaseFragment {
     coverImage.setImageResource(character.getCover());
     nameLabel.setText(character.getName());
     descriptionLabel.setText(character.getDescription());
+    accelerateAbilitie.initAbilitie("Acclerate", character.getAbilities().getAccelerate());
+    steerAbilitie.initAbilitie("Steer", character.getAbilities().getSteer());
+    brakeAbilitie.initAbilitie("Brake", character.getAbilities().getBrake());
+    reverseAbilitie.initAbilitie("Reverse", character.getAbilities().getReverse());
+    lookBehindAbilitie.initAbilitie("LookBehind", character.getAbilities().getLookBehind());
+    driftAbilitie.initAbilitie("Drift", character.getAbilities().getDrift());
   }
 }

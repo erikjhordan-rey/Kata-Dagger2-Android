@@ -1,4 +1,4 @@
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/coordinator"
@@ -30,7 +30,7 @@
           tools:ignore="ContentDescription"
           />
 
-      <io.github.erikcaffrey.kata_dagger2_mariokart.view.widget.HexagonMaskView
+      <io.github.erikcaffrey.kata_dagger2_mariokart.view.widget.HexagonalImageView
           android:id="@+id/image_profile"
           android:layout_width="100dp"
           android:layout_height="100dp"
@@ -56,16 +56,19 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginStart="24dp"
         android:orientation="vertical"
-        android:transitionGroup="true"
         >
 
       <TextView
           android:id="@+id/label_name"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:layout_margin="24dp"
+          android:layout_marginTop="24dp"
           android:fontFamily="sans-serif-light"
           android:textSize="40sp"
           />
@@ -74,13 +77,62 @@
           android:id="@+id/label_description"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:layout_marginBottom="24dp"
-          android:layout_marginEnd="24dp"
-          android:layout_marginStart="24dp"
           android:layout_marginTop="12dp"
           android:lineSpacingMultiplier="1.2"
           android:textSize="20sp"
           />
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="24dp"
+          android:fontFamily="sans-serif-light"
+          android:text="Abilities"
+          android:textSize="28sp"
+          />
+
+      <io.github.erikcaffrey.kata_dagger2_mariokart.view.widget.AbilitieView
+          android:id="@+id/abilitie_accelerate"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="24dp"
+          />
+
+      <io.github.erikcaffrey.kata_dagger2_mariokart.view.widget.AbilitieView
+          android:id="@+id/abilitie_steer"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          />
+
+      <io.github.erikcaffrey.kata_dagger2_mariokart.view.widget.AbilitieView
+          android:id="@+id/abilitie_brake"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          />
+
+      <io.github.erikcaffrey.kata_dagger2_mariokart.view.widget.AbilitieView
+          android:id="@+id/abilitie_reverse"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          />
+
+
+      <io.github.erikcaffrey.kata_dagger2_mariokart.view.widget.AbilitieView
+          android:id="@+id/abilitie_look_behind"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          />
+
+      <io.github.erikcaffrey.kata_dagger2_mariokart.view.widget.AbilitieView
+          android:id="@+id/abilitie_drift"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="24dp"
+          />
+
+
     </LinearLayout>
+
   </LinearLayout>
-</android.support.design.widget.CoordinatorLayout>
+
+</android.support.v4.widget.NestedScrollView>

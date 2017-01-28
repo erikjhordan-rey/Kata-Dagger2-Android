@@ -21,6 +21,8 @@ import android.support.annotation.NonNull;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
+import android.view.View;
+import android.widget.ProgressBar;
 import butterknife.BindView;
 import io.github.erikcaffrey.kata_dagger2_mariokart.R;
 import io.github.erikcaffrey.kata_dagger2_mariokart.SuperMarioKartApplication;
@@ -35,6 +37,7 @@ import javax.inject.Inject;
 public class CharacterActivity extends BaseActivity implements CharactersPresenter.View {
 
   @BindView(R.id.view_pager) ViewPager pager;
+  @BindView(R.id.progress_detail) ProgressBar detailProgress;
 
   private CharacterPagerAdapter characterPagerAdapter;
   private MarioTransformer marioTransformer;
@@ -72,6 +75,11 @@ public class CharacterActivity extends BaseActivity implements CharactersPresent
     }
     pager.setPageTransformer(false, marioTransformer);
     marioTransformer.enableScaling(true);
+  }
+
+  @Override public void hideLoading() {
+    detailProgress.setVisibility(View.GONE);
+    pager.setVisibility(View.VISIBLE);
   }
 
   public static float dpToPixels(int dp, Context context) {

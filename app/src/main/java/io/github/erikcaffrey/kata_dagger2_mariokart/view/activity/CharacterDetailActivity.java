@@ -22,6 +22,7 @@ import android.support.annotation.NonNull;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
 import android.view.View;
+import android.widget.ProgressBar;
 import butterknife.BindView;
 import io.github.erikcaffrey.kata_dagger2_mariokart.R;
 import io.github.erikcaffrey.kata_dagger2_mariokart.SuperMarioKartApplication;
@@ -36,6 +37,7 @@ import javax.inject.Inject;
 public class CharacterDetailActivity extends BaseActivity implements CharactersPresenter.View {
 
   @BindView(R.id.pager) ViewPager pager;
+  @BindView(R.id.progress_detail) ProgressBar detailProgress;
 
   private CharacterDetailPagerAdapter characterPagerAdapter;
 
@@ -72,6 +74,12 @@ public class CharacterDetailActivity extends BaseActivity implements CharactersP
 
     pager.setCurrentItem(getIntent().getIntExtra(CharacterFragment.EXTRA_CHARACTER_POSITION, 0));
     pager.setVisibility(View.VISIBLE);
+  }
+
+
+  @Override public void hideLoading() {
+    pager.setVisibility(View.VISIBLE);
+    detailProgress.setVisibility(View.GONE);
   }
 
   public static Intent getCallingIntent(Context context, int position) {

@@ -45,6 +45,7 @@ public class CharactersPresenter extends Presenter<CharactersPresenter.View> {
 
     @Override public void onComplete() {
       super.onComplete();
+      getView().hideLoading();
     }
 
     @Override public void onError(Throwable e) {
@@ -60,5 +61,7 @@ public class CharactersPresenter extends Presenter<CharactersPresenter.View> {
   public interface View extends Presenter.View {
 
     void showCharacters(List<Character> characters);
+
+    void hideLoading();
   }
 }
