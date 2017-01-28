@@ -15,41 +15,47 @@
       android:theme="@style/AppTheme.PopupOverlay"
       />
 
-  <TextView
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_gravity="center|top"
-      android:layout_marginTop="@dimen/label_margin_top"
-      android:fontFamily="sans-serif-light"
-      android:text="@string/text_title"
-      android:textSize="@dimen/text_size_large"
-      />
-
-  <TextView
+  <LinearLayout
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:layout_gravity="center"
-      android:layout_marginBottom="@dimen/label_margin_bottom"
-      android:fontFamily="sans-serif-light"
       android:gravity="center"
-      android:padding="@dimen/space_medium"
-      android:text="@string/text_sub_title"
-      android:textSize="@dimen/text_size_medium"
-      />
+      android:orientation="vertical"
+      >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/label_margin_top"
+        android:fontFamily="sans-serif-light"
+        android:text="@string/text_title"
+        android:textSize="@dimen/text_size_large"
+        />
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/label_margin_bottom"
+        android:fontFamily="sans-serif-light"
+        android:gravity="center"
+        android:padding="@dimen/space_medium"
+        android:text="@string/text_sub_title"
+        android:textSize="@dimen/text_size_medium"
+        />
+  </LinearLayout>
 
   <ViewFlipper
-      xmlns:android="http://schemas.android.com/apk/res/android"
       android:layout_width="match_parent"
-      android:layout_height="match_parent"
+      android:layout_height="@dimen/pager_height"
+      android:layout_gravity="bottom"
       >
 
     <ProgressBar
         android:id="@+id/progress_detail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/space_xlarge"
         android:layout_gravity="center"
+        android:layout_marginBottom="48dp"
+        android:layout_marginTop="@dimen/space_xlarge"
         />
 
     <android.support.v4.view.ViewPager
@@ -68,7 +74,6 @@
         />
 
   </ViewFlipper>
-
 
 
 </android.support.design.widget.CoordinatorLayout>
