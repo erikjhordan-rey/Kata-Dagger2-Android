@@ -53,18 +53,25 @@ public class CharacterFragment extends BaseFragment {
 
   @Override protected void onPrepareFragment(@NonNull View view) {
     super.onPrepareFragment(view);
-    final Character character = (Character) getArguments().getSerializable(EXTRA_CHARACTER);
+    final Character character = getCharacter();
+    renderCharacter(character);
+  }
+
+  private void renderCharacter(final Character character) {
     nameButton.setText(character.getName());
     profileImage.setImageResource(character.getPhoto());
     positionLabel.setText(character.getId());
     cardView.setMaxCardElevation(cardView.getCardElevation() * CharacterAdapter.MAX_ELEVATION);
-
     nameButton.setOnClickListener(new View.OnClickListener() {
       @Override public void onClick(View v) {
         int position = Integer.parseInt(character.getId()) - 1;
         startActivity(CharacterDetailActivity.getCallingIntent(getContext(), position));
       }
     });
+  }
+
+  private Character getCharacter() {
+    return (Character) getArguments().getSerializable(EXTRA_CHARACTER);
   }
 
   public CardView getCardView() {

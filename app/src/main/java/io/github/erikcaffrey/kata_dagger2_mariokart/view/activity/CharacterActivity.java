@@ -16,7 +16,6 @@
 
 package io.github.erikcaffrey.kata_dagger2_mariokart.view.activity;
 
-import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
@@ -30,19 +29,22 @@ import io.github.erikcaffrey.kata_dagger2_mariokart.domain.model.Character;
 import io.github.erikcaffrey.kata_dagger2_mariokart.view.adapter.CharacterPagerAdapter;
 import io.github.erikcaffrey.kata_dagger2_mariokart.view.fragment.CharacterFragment;
 import io.github.erikcaffrey.kata_dagger2_mariokart.view.presenter.CharactersPresenter;
-import io.github.erikcaffrey.kata_dagger2_mariokart.view.widget.MarioTransformer;
+import io.github.erikcaffrey.kata_dagger2_mariokart.view.utils.UIUtils;
+import io.github.erikcaffrey.kata_dagger2_mariokart.view.widget.MarioKartTransformer;
 import java.util.List;
 import javax.inject.Inject;
 
 public class CharacterActivity extends BaseActivity implements CharactersPresenter.View {
 
+  private final static int ELEVATION_DP = 2;
+
   @BindView(R.id.view_pager) ViewPager pager;
   @BindView(R.id.progress_detail) ProgressBar detailProgress;
 
-  private CharacterPagerAdapter characterPagerAdapter;
-  private MarioTransformer marioTransformer;
+  private CharacterPagerAdapter adapter;
+  private MarioKartTransformer transformer;
 
-  @Inject CharactersPresenter charactersPresenter;
+  @Inject CharactersPresenter presenter;
 
   @Override protected int getLayoutResID() {
     return R.layout.activity_characters;
@@ -57,24 +59,19 @@ public class CharacterActivity extends BaseActivity implements CharactersPresent
   @Override protected void onPrepareActivity() {
     super.onPrepareActivity();
     initializeDagger();
-
-    characterPagerAdapter = new CharacterPagerAdapter(getSupportFragmentManager());
-    characterPagerAdapter.setElevation(dpToPixels(2, this));
-    marioTransformer = new MarioTransformer(pager, characterPagerAdapter);
-    pager.setAdapter(characterPagerAdapter);
-
-    charactersPresenter.setView(this);
-    charactersPresenter.initialize();
+    initializeAdapter();
+    presenter.setView(this);
+    presenter.initialize();
   }
 
   @Override public void showCharacters(List<Character> characters) {
     for (Character character : characters) {
       CharacterFragment characterFragment = CharacterFragment.newInstance(character);
-      characterPagerAdapter.addCharacter(characterFragment);
-      characterPagerAdapter.notifyDataSetChanged();
+      adapter.addCharacter(characterFragment);
+      adapter.notifyDataSetChanged();
     }
-    pager.setPageTransformer(false, marioTransformer);
-    marioTransformer.enableScaling(true);
+    pager.setPageTransformer(false, transformer);
+    transformer.enableScaling(true);
   }
 
   @Override public void hideLoading() {
@@ -82,12 +79,15 @@ public class CharacterActivity extends BaseActivity implements CharactersPresent
     pager.setVisibility(View.VISIBLE);
   }
 
-  public static float dpToPixels(int dp, Context context) {
-    return dp * (context.getResources().getDisplayMetrics().density);
-  }
-
   private void initializeDagger() {
     SuperMarioKartApplication app = (SuperMarioKartApplication) getApplication();
     app.getCharactersComponent().inject(this);
+  }
+
+  private void initializeAdapter() {
+    adapter = new CharacterPagerAdapter(getSupportFragmentManager());
+    adapter.setElevation(UIUtils.transformDpToPixels(ELEVATION_DP, this));
+    transformer = new MarioKartTransformer(pager, adapter);
+    pager.setAdapter(adapter);
   }
 }

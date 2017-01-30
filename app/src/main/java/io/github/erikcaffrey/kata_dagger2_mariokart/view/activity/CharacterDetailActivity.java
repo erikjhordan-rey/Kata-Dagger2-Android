@@ -36,16 +36,19 @@ import javax.inject.Inject;
 
 public class CharacterDetailActivity extends BaseActivity implements CharactersPresenter.View {
 
+  private static final int DEFAULT_POSITION = 0;
+
   @BindView(R.id.pager) ViewPager pager;
   @BindView(R.id.progress_detail) ProgressBar detailProgress;
 
-  private CharacterDetailPagerAdapter characterPagerAdapter;
+  private CharacterDetailPagerAdapter adapter;
 
-  @Inject CharactersPresenter charactersPresenter;
+  @Inject CharactersPresenter presenter;
 
   @Override protected int getLayoutResID() {
     return R.layout.activity_detail_character;
   }
+
 
   @Override protected void onSetupSupportActionBar(@NonNull ActionBar actionBar) {
     super.onSetupSupportActionBar(actionBar);
@@ -54,28 +57,25 @@ public class CharacterDetailActivity extends BaseActivity implements CharactersP
   }
 
   @Override protected void onPrepareActivity() {
+
     super.onPrepareActivity();
     initializeDagger();
-
-    characterPagerAdapter = new CharacterDetailPagerAdapter(getSupportFragmentManager());
-    pager.setAdapter(characterPagerAdapter);
-
-    charactersPresenter.setView(this);
-    charactersPresenter.initialize();
+    initializeAdapter();
+    presenter.setView(this);
+    presenter.initialize();
   }
 
   @Override public void showCharacters(List<Character> characters) {
     for (Character character : characters) {
       CharacterDetailFragment characterFragment = CharacterDetailFragment.newInstance(character);
-      characterPagerAdapter.addCharacter(characterFragment);
-      characterPagerAdapter.notifyDataSetChanged();
-      System.out.println(character.getName());
+      adapter.addCharacter(characterFragment);
+      adapter.notifyDataSetChanged();
     }
 
-    pager.setCurrentItem(getIntent().getIntExtra(CharacterFragment.EXTRA_CHARACTER_POSITION, 0));
+    pager.setCurrentItem(
+        getIntent().getIntExtra(CharacterFragment.EXTRA_CHARACTER_POSITION, DEFAULT_POSITION));
     pager.setVisibility(View.VISIBLE);
   }
-
 
   @Override public void hideLoading() {
     pager.setVisibility(View.VISIBLE);
@@ -91,5 +91,10 @@ public class CharacterDetailActivity extends BaseActivity implements CharactersP
   private void initializeDagger() {
     SuperMarioKartApplication app = (SuperMarioKartApplication) getApplication();
     app.getCharactersComponent().inject(this);
+  }
+
+  private void initializeAdapter() {
+    adapter = new CharacterDetailPagerAdapter(getSupportFragmentManager());
+    pager.setAdapter(adapter);
   }
 }

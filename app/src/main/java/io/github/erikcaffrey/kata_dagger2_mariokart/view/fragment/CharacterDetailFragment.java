@@ -2,15 +2,16 @@ package io.github.erikcaffrey.kata_dagger2_mariokart.view.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.v7.app.ActionBar;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 import butterknife.BindView;
 import io.github.erikcaffrey.kata_dagger2_mariokart.R;
+import io.github.erikcaffrey.kata_dagger2_mariokart.domain.model.Abilities;
 import io.github.erikcaffrey.kata_dagger2_mariokart.domain.model.Character;
-import io.github.erikcaffrey.kata_dagger2_mariokart.view.widget.AbilitieView;
+import io.github.erikcaffrey.kata_dagger2_mariokart.view.widget.SkillView;
 
 import static io.github.erikcaffrey.kata_dagger2_mariokart.view.fragment.CharacterFragment.EXTRA_CHARACTER;
 
@@ -29,12 +30,12 @@ public class CharacterDetailFragment extends BaseFragment {
   @BindView(R.id.label_name) TextView nameLabel;
   @BindView(R.id.label_description) TextView descriptionLabel;
   @BindView(R.id.toolbar) Toolbar toolbar;
-  @BindView(R.id.abilitie_accelerate) AbilitieView accelerateAbilitie;
-  @BindView(R.id.abilitie_steer) AbilitieView steerAbilitie;
-  @BindView(R.id.abilitie_brake) AbilitieView brakeAbilitie;
-  @BindView(R.id.abilitie_reverse) AbilitieView reverseAbilitie;
-  @BindView(R.id.abilitie_look_behind) AbilitieView lookBehindAbilitie;
-  @BindView(R.id.abilitie_drift) AbilitieView driftAbilitie;
+  @BindView(R.id.skill_accelerate) SkillView accelerateSkill;
+  @BindView(R.id.skill_steer) SkillView steerSkill;
+  @BindView(R.id.skill_brake) SkillView brakeSkill;
+  @BindView(R.id.skill_reverse) SkillView reverseSkill;
+  @BindView(R.id.skill_look_behind) SkillView lookBehindSkill;
+  @BindView(R.id.skill_drift) SkillView driftSkill;
 
   @Override protected int getLayoutResID() {
     return R.layout.fragment_detail_character;
@@ -42,19 +43,42 @@ public class CharacterDetailFragment extends BaseFragment {
 
   @Override protected void onPrepareFragment(@NonNull View view) {
     super.onPrepareFragment(view);
+    initializeToolbar();
+    Character character = getCharacter();
+    renderCharacterDetail(character);
+  }
+
+  private void initializeToolbar() {
     setSupportActionBarOnFragment(toolbar);
-    getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-    getSupportActionBar().setDisplayShowTitleEnabled(false);
-    Character character = (Character) getArguments().getSerializable(EXTRA_CHARACTER);
+    ActionBar actionBar = getSupportActionBar();
+    if (actionBar != null) {
+      actionBar.setDisplayHomeAsUpEnabled(true);
+      actionBar.setDisplayShowTitleEnabled(false);
+    }
+  }
+
+  private Character getCharacter() {
+    return (Character) getArguments().getSerializable(EXTRA_CHARACTER);
+  }
+
+  private void renderCharacterDetail(Character character) {
     profileImage.setImageResource(character.getPhoto());
     coverImage.setImageResource(character.getCover());
     nameLabel.setText(character.getName());
     descriptionLabel.setText(character.getDescription());
-    accelerateAbilitie.initAbilitie("Acclerate", character.getAbilities().getAccelerate());
-    steerAbilitie.initAbilitie("Steer", character.getAbilities().getSteer());
-    brakeAbilitie.initAbilitie("Brake", character.getAbilities().getBrake());
-    reverseAbilitie.initAbilitie("Reverse", character.getAbilities().getReverse());
-    lookBehindAbilitie.initAbilitie("LookBehind", character.getAbilities().getLookBehind());
-    driftAbilitie.initAbilitie("Drift", character.getAbilities().getDrift());
+    renderSkills(character.getAbilities());
+  }
+
+  private void renderSkills(Abilities abilities) {
+    renderSkill(accelerateSkill, getString(R.string.text_accelerate), abilities.getAccelerate());
+    renderSkill(steerSkill, getString(R.string.text_steer), abilities.getSteer());
+    renderSkill(brakeSkill, getString(R.string.text_brake), abilities.getBrake());
+    renderSkill(reverseSkill, getString(R.string.text_reverse), abilities.getReverse());
+    renderSkill(lookBehindSkill, getString(R.string.text_look_behind), abilities.getLookBehind());
+    renderSkill(driftSkill, getString(R.string.text_drift), abilities.getDrift());
+  }
+
+  private void renderSkill(SkillView skillView, String skill, int rank) {
+    skillView.setSkill(skill, rank);
   }
 }

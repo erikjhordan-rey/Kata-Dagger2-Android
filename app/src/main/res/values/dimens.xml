@@ -11,7 +11,7 @@
   <dimen name="space_xlarge">64dp</dimen>
 
   <dimen name="pager_height">330dp</dimen>
-  <dimen name="label_margin_top">128dp</dimen>
+  <dimen name="label_margin_top">90dp</dimen>
   <dimen name="label_margin_bottom">226dp</dimen>
 
 </resources>

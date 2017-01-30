@@ -2,4 +2,11 @@
   <string name="app_name">Kata Dagger 2</string>
   <string name="text_title">Mario Kart!</string>
   <string name="text_sub_title">The main goal is to practice Dependency injection using Dagger 2</string>
+  <string name="abilities">Abilities</string>
+  <string name="text_accelerate">Accelerate</string>
+  <string name="text_steer">Steer</string>
+  <string name="text_brake">Brake</string>
+  <string name="text_reverse">Reverse</string>
+  <string name="text_look_behind">LookBehind</string>
+  <string name="text_drift">Drift</string>
 </resources>
