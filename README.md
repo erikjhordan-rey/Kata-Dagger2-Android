@@ -15,6 +15,12 @@ Libraries used on the sample project
 
 ![](./art/mariokart.png)
 
+
+
+## Demo
+
+![](./art/mario_kart.gif)
+
 Do you want to contribute?
 --------------------------
 
