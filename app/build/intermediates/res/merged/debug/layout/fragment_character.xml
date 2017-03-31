@@ -1,0 +1,51 @@
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    app:cardUseCompatPadding="true"
+    >
+
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@color/colorPrimary"
+      android:padding="16dp"
+      >
+
+    <io.github.erikcaffrey.kata_dagger2_mariokart.view.widget.MarioKartLabel
+        android:id="@+id/label_position"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start|center|top"
+        android:gravity="center"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="32sp"
+        />
+    <ImageView
+        android:id="@+id/image_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button_name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:padding="8dp"
+        />
+
+
+    <Button
+        android:id="@+id/button_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="16dp"
+        android:theme="@style/SignUpSecondaryButton"
+        style="@style/AppTheme.LoginButton"
+        />
+
+
+  </RelativeLayout>
+
+</android.support.v7.widget.CardView>

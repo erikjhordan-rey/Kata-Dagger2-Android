@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/design_ic_visibility.xml",
+        "source": "/Users/ErikJhordan/.android/build-cache/c42769c9236eecdc188a71150e712ed3ea2a9956/output/res/drawable-anydpi-v21/design_ic_visibility.xml"
+    },
+    {
+        "merged": "/Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_menu_white_24dp.xml",
+        "source": "/Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_menu_white_24dp.xml"
+    },
+    {
+        "merged": "/Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/design_ic_visibility_off.xml",
+        "source": "/Users/ErikJhordan/.android/build-cache/c42769c9236eecdc188a71150e712ed3ea2a9956/output/res/drawable-anydpi-v21/design_ic_visibility_off.xml"
+    }
+]

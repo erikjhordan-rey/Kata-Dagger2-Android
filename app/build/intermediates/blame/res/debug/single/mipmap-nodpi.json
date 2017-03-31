@@ -1,0 +1,38 @@
+[
+    {
+        "merged": "/Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/build/intermediates/res/merged/debug/mipmap-nodpi/bowser.png",
+        "source": "/Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/src/main/res/mipmap-nodpi/bowser.png"
+    },
+    {
+        "merged": "/Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/build/intermediates/res/merged/debug/mipmap-nodpi/wario.png",
+        "source": "/Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/src/main/res/mipmap-nodpi/wario.png"
+    },
+    {
+        "merged": "/Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/build/intermediates/res/merged/debug/mipmap-nodpi/dk.png",
+        "source": "/Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/src/main/res/mipmap-nodpi/dk.png"
+    },
+    {
+        "merged": "/Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/build/intermediates/res/merged/debug/mipmap-nodpi/mario.png",
+        "source": "/Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/src/main/res/mipmap-nodpi/mario.png"
+    },
+    {
+        "merged": "/Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/build/intermediates/res/merged/debug/mipmap-nodpi/daisy.png",
+        "source": "/Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/src/main/res/mipmap-nodpi/daisy.png"
+    },
+    {
+        "merged": "/Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/build/intermediates/res/merged/debug/mipmap-nodpi/toad.png",
+        "source": "/Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/src/main/res/mipmap-nodpi/toad.png"
+    },
+    {
+        "merged": "/Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/build/intermediates/res/merged/debug/mipmap-nodpi/luigi.png",
+        "source": "/Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/src/main/res/mipmap-nodpi/luigi.png"
+    },
+    {
+        "merged": "/Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/build/intermediates/res/merged/debug/mipmap-nodpi/peach.png",
+        "source": "/Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/src/main/res/mipmap-nodpi/peach.png"
+    },
+    {
+        "merged": "/Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/build/intermediates/res/merged/debug/mipmap-nodpi/yoshi.png",
+        "source": "/Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/src/main/res/mipmap-nodpi/yoshi.png"
+    }
+]

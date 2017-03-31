@@ -1,0 +1,138 @@
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinator"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+  <LinearLayout
+      android:id="@+id/details_container"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      >
+
+    <FrameLayout
+        android:id="@+id/details_header_container"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="#000"
+        android:transitionGroup="true"
+        >
+
+      <ImageView
+          android:id="@+id/image_cover"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:padding="16dp"
+          android:tint="@color/background_image_photo_tint"
+          tools:ignore="ContentDescription"
+          />
+
+      <io.github.erikcaffrey.kata_dagger2_mariokart.view.widget.MarioKartImage
+          android:id="@+id/image_profile"
+          android:layout_width="100dp"
+          android:layout_height="100dp"
+          android:layout_gravity="start|bottom"
+          android:layout_marginBottom="16dp"
+          android:layout_marginStart="16dp"
+          android:background="@android:color/transparent"
+          android:src="@drawable/ic_bowser"
+          android:tint="@color/album_image_photo_tint"
+          tools:ignore="ContentDescription"
+          />
+
+      <android.support.v7.widget.Toolbar
+          android:id="@+id/toolbar"
+          android:layout_width="match_parent"
+          android:layout_height="?attr/actionBarSize"
+          android:background="@android:color/transparent"
+          app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+          />
+
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginStart="24dp"
+        android:orientation="vertical"
+        >
+
+      <TextView
+          android:id="@+id/label_name"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="24dp"
+          android:fontFamily="sans-serif-light"
+          android:textSize="40sp"
+          />
+
+      <TextView
+          android:id="@+id/label_description"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="12dp"
+          android:lineSpacingMultiplier="1.2"
+          android:textSize="20sp"
+          />
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="24dp"
+          android:fontFamily="sans-serif-light"
+          android:text="@string/abilities"
+          android:textSize="28sp"
+          />
+
+      <io.github.erikcaffrey.kata_dagger2_mariokart.view.widget.SkillView
+          android:id="@+id/skill_accelerate"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="24dp"
+          />
+
+      <io.github.erikcaffrey.kata_dagger2_mariokart.view.widget.SkillView
+          android:id="@+id/skill_steer"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          />
+
+      <io.github.erikcaffrey.kata_dagger2_mariokart.view.widget.SkillView
+          android:id="@+id/skill_brake"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          />
+
+      <io.github.erikcaffrey.kata_dagger2_mariokart.view.widget.SkillView
+          android:id="@+id/skill_reverse"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          />
+
+
+      <io.github.erikcaffrey.kata_dagger2_mariokart.view.widget.SkillView
+          android:id="@+id/skill_look_behind"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          />
+
+      <io.github.erikcaffrey.kata_dagger2_mariokart.view.widget.SkillView
+          android:id="@+id/skill_drift"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="24dp"
+          />
+
+
+    </LinearLayout>
+
+  </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>
