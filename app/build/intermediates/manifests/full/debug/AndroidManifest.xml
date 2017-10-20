@@ -6,7 +6,11 @@
 
     <uses-sdk
         android:minSdkVersion="17"
-        android:targetSdkVersion="25" />
+        android:targetSdkVersion="26" />
+
+    <meta-data
+        android:name="android.support.VERSION"
+        android:value="26.0.0-alpha1" />
 
     <application
         android:name="io.github.erikcaffrey.kata_dagger2_mariokart.SuperMarioKartApplication"

@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="io.github.erikcaffrey.kata_dagger2_mariokart.test">
 
-    <uses-sdk android:minSdkVersion="17" android:targetSdkVersion="25" />
+    <uses-sdk android:minSdkVersion="17" android:targetSdkVersion="26" />
 
     <application>
         <uses-library android:name="android.test.runner" />
