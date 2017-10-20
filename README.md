@@ -8,7 +8,6 @@ Libraries used on the sample project
 * [ButterKnife][1]
 * [RxJava & RxAndroid][2]
 * [Dagger 2][3]
-* I working to show full example testing the app using a dagger mock library
 
 ## Screenshots
 
