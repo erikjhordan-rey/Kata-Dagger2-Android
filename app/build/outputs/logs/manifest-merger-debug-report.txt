@@ -1,40 +1,75 @@
 -- Merging decision tree log ---
 manifest
 ADDED from /Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/src/main/AndroidManifest.xml:2:1-26:12
+INJECTED from /Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/src/main/AndroidManifest.xml:2:1-26:12
+INJECTED from /Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/src/main/AndroidManifest.xml:2:1-26:12
+INJECTED from /Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/src/main/AndroidManifest.xml:2:1-26:12
+MERGED from [io.reactivex.rxjava2:rxandroid:2.0.1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/rxandroid-2.0.1.aar/679e5fa75e0097fd22d51485597d4e87/AndroidManifest.xml:15:1-21:12
+MERGED from [com.jakewharton:butterknife:8.4.0] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/butterknife-8.4.0.aar/a1ac255b78ff10f927cf24e553bcb4a1/AndroidManifest.xml:2:1-7:12
+MERGED from [com.android.support:design:26.0.0-alpha1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/design-26.0.0-alpha1.aar/1690f3af37491d497de4e56e8858ee95/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.0-alpha1.aar/3980529e3f282774051695e48fc39486/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:cardview-v7:26.0.0-alpha1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/cardview-v7-26.0.0-alpha1.aar/7c1f7bb86dbac03e7e711dd98220472e/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:recyclerview-v7:26.0.0-alpha1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.0.0-alpha1.aar/0ffb46ed724f0129ab5636d1c863a830/AndroidManifest.xml:17:1-26:12
+MERGED from [com.android.support:transition:26.0.0-alpha1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/transition-26.0.0-alpha1.aar/d71c288bf159b24c9d4d0dbe5abfd80a/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.0.0-alpha1.aar/b963d7a0fdab3ac4ddcce9a2c5f16bcb/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-vector-drawable:26.0.0-alpha1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.0.0-alpha1.aar/731d457fcfa3fa006dcc5e8a33000795/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-v4:26.0.0-alpha1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/support-v4-26.0.0-alpha1.aar/af3eb8de7a82b29bd4e880c3f273072a/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-media-compat:26.0.0-alpha1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.0.0-alpha1.aar/3fb3a42470e2ab1c6b2efbfe3719a4ae/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-fragment:26.0.0-alpha1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/support-fragment-26.0.0-alpha1.aar/4d7ffc1c2d6b4e88e6221243dd364259/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.0.0-alpha1.aar/6ced9ccd3bd1d0e0f993d685dda4ec80/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.0.0-alpha1.aar/eaaefd9558d61c88bae88a956d411a72/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-compat:26.0.0-alpha1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/support-compat-26.0.0-alpha1.aar/2961bdf09fd2b9a047c7cd416d484436/AndroidManifest.xml:17:1-31:12
+INJECTED from /Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/src/main/AndroidManifest.xml:2:1-26:12
+INJECTED from /Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/src/main/AndroidManifest.xml:2:1-26:12
+INJECTED from /Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/src/main/AndroidManifest.xml:2:1-26:12
 	package
 		ADDED from /Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/src/main/AndroidManifest.xml:3:5-59
 		INJECTED from /Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/src/main/AndroidManifest.xml
+		ADDED from /Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/src/main/AndroidManifest.xml:2:1-26:12
+		INJECTED from /Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/src/main/AndroidManifest.xml
+		ADDED from /Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/src/main/AndroidManifest.xml:2:1-26:12
 		INJECTED from /Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/src/main/AndroidManifest.xml:2:11-69
-	android:versionCode
-		INJECTED from /Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/src/main/AndroidManifest.xml
 application
 ADDED from /Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/src/main/AndroidManifest.xml:5:3-24:17
-MERGED from [com.android.support:design:26.0.0-alpha1] /Users/ErikJhordan/.android/build-cache/53767fe48438c90c7b2b23ec7086a0a66b6caafe/output/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:transition:26.0.0-alpha1] /Users/ErikJhordan/.android/build-cache/9153de3b09c7c97f34cdcd77638485855c06fdec/output/AndroidManifest.xml:26:5-20
-MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] /Users/ErikJhordan/.android/build-cache/afc3dab9d0c3c4984da9981eab40054f94fe6bdf/output/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-v4:26.0.0-alpha1] /Users/ErikJhordan/.android/build-cache/7f80787e2ef61dbc3b9c53c293d4f03f3923e5c3/output/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-media-compat:26.0.0-alpha1] /Users/ErikJhordan/.android/build-cache/f2d6d07070bb8050f765ffe1e4ab095b1e45ae2f/output/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-fragment:26.0.0-alpha1] /Users/ErikJhordan/.android/build-cache/7ee0493d58f199851212985b0456d735bef4af42/output/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] /Users/ErikJhordan/.android/build-cache/872d0563ea5b973348f2e65a04824242cd5f3ca9/output/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] /Users/ErikJhordan/.android/build-cache/368e4066432338625d0a46b7b1b9b8f6d9f7ff77/output/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] /Users/ErikJhordan/.android/build-cache/a51d477f5f13a872795655fa69b070088625c924/output/AndroidManifest.xml:26:5-20
-MERGED from [com.android.support:support-vector-drawable:26.0.0-alpha1] /Users/ErikJhordan/.android/build-cache/648508f8158924dce907cfb7ec74a03bc4f8ff2c/output/AndroidManifest.xml:26:5-20
-MERGED from [com.android.support:support-compat:26.0.0-alpha1] /Users/ErikJhordan/.android/build-cache/111d8c2184ba5958a2b71b881ced8c4ea7787f49/output/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:cardview-v7:26.0.0-alpha1] /Users/ErikJhordan/.android/build-cache/4d8fa89251db590a6182f3e7fe9c16ece3c7ed5e/output/AndroidManifest.xml:26:5-20
-	android:label
-		ADDED from /Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/src/main/AndroidManifest.xml:8:7-39
+MERGED from [com.android.support:design:26.0.0-alpha1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/design-26.0.0-alpha1.aar/1690f3af37491d497de4e56e8858ee95/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:design:26.0.0-alpha1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/design-26.0.0-alpha1.aar/1690f3af37491d497de4e56e8858ee95/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.0-alpha1.aar/3980529e3f282774051695e48fc39486/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.0-alpha1.aar/3980529e3f282774051695e48fc39486/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:cardview-v7:26.0.0-alpha1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/cardview-v7-26.0.0-alpha1.aar/7c1f7bb86dbac03e7e711dd98220472e/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:cardview-v7:26.0.0-alpha1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/cardview-v7-26.0.0-alpha1.aar/7c1f7bb86dbac03e7e711dd98220472e/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:transition:26.0.0-alpha1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/transition-26.0.0-alpha1.aar/d71c288bf159b24c9d4d0dbe5abfd80a/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:transition:26.0.0-alpha1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/transition-26.0.0-alpha1.aar/d71c288bf159b24c9d4d0dbe5abfd80a/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.0.0-alpha1.aar/b963d7a0fdab3ac4ddcce9a2c5f16bcb/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.0.0-alpha1.aar/b963d7a0fdab3ac4ddcce9a2c5f16bcb/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:26.0.0-alpha1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.0.0-alpha1.aar/731d457fcfa3fa006dcc5e8a33000795/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:26.0.0-alpha1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.0.0-alpha1.aar/731d457fcfa3fa006dcc5e8a33000795/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-v4:26.0.0-alpha1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/support-v4-26.0.0-alpha1.aar/af3eb8de7a82b29bd4e880c3f273072a/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-v4:26.0.0-alpha1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/support-v4-26.0.0-alpha1.aar/af3eb8de7a82b29bd4e880c3f273072a/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:26.0.0-alpha1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.0.0-alpha1.aar/3fb3a42470e2ab1c6b2efbfe3719a4ae/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:26.0.0-alpha1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.0.0-alpha1.aar/3fb3a42470e2ab1c6b2efbfe3719a4ae/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:26.0.0-alpha1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/support-fragment-26.0.0-alpha1.aar/4d7ffc1c2d6b4e88e6221243dd364259/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:26.0.0-alpha1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/support-fragment-26.0.0-alpha1.aar/4d7ffc1c2d6b4e88e6221243dd364259/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.0.0-alpha1.aar/6ced9ccd3bd1d0e0f993d685dda4ec80/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.0.0-alpha1.aar/6ced9ccd3bd1d0e0f993d685dda4ec80/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.0.0-alpha1.aar/eaaefd9558d61c88bae88a956d411a72/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.0.0-alpha1.aar/eaaefd9558d61c88bae88a956d411a72/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-compat:26.0.0-alpha1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/support-compat-26.0.0-alpha1.aar/2961bdf09fd2b9a047c7cd416d484436/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-compat:26.0.0-alpha1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/support-compat-26.0.0-alpha1.aar/2961bdf09fd2b9a047c7cd416d484436/AndroidManifest.xml:29:5-20
 	android:supportsRtl
 		ADDED from /Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/src/main/AndroidManifest.xml:9:7-33
-	android:allowBackup
-		ADDED from /Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/src/main/AndroidManifest.xml:6:7-33
+	android:label
+		ADDED from /Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/src/main/AndroidManifest.xml:8:7-39
 	android:icon
 		ADDED from /Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/src/main/AndroidManifest.xml:7:7-41
+	android:allowBackup
+		ADDED from /Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/src/main/AndroidManifest.xml:6:7-33
 	android:theme
 		ADDED from /Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/src/main/AndroidManifest.xml:11:7-38
 	android:name
@@ -63,44 +98,77 @@ ADDED from /Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/s
 		ADDED from /Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/src/main/AndroidManifest.xml:21:15-68
 uses-sdk
 INJECTED from /Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
-MERGED from [io.reactivex.rxjava2:rxandroid:2.0.1] /Users/ErikJhordan/.android/build-cache/5ae717ef76fb8707c75fa58beb1398b219d104bc/output/AndroidManifest.xml:19:5-43
-MERGED from [com.jakewharton:butterknife:8.4.0] /Users/ErikJhordan/.android/build-cache/7e227d79212851cc4f318146288ab78e0bf3e64f/output/AndroidManifest.xml:5:5-43
-MERGED from [com.android.support:design:26.0.0-alpha1] /Users/ErikJhordan/.android/build-cache/53767fe48438c90c7b2b23ec7086a0a66b6caafe/output/AndroidManifest.xml:21:5-23:62
-MERGED from [com.android.support:recyclerview-v7:26.0.0-alpha1] /Users/ErikJhordan/.android/build-cache/1ec66d042aacedf3ac7f0f6dcfd18b99fea9e5e2/output/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:26.0.0-alpha1] /Users/ErikJhordan/.android/build-cache/9153de3b09c7c97f34cdcd77638485855c06fdec/output/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] /Users/ErikJhordan/.android/build-cache/afc3dab9d0c3c4984da9981eab40054f94fe6bdf/output/AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:support-v4:26.0.0-alpha1] /Users/ErikJhordan/.android/build-cache/7f80787e2ef61dbc3b9c53c293d4f03f3923e5c3/output/AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-media-compat:26.0.0-alpha1] /Users/ErikJhordan/.android/build-cache/f2d6d07070bb8050f765ffe1e4ab095b1e45ae2f/output/AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-fragment:26.0.0-alpha1] /Users/ErikJhordan/.android/build-cache/7ee0493d58f199851212985b0456d735bef4af42/output/AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] /Users/ErikJhordan/.android/build-cache/872d0563ea5b973348f2e65a04824242cd5f3ca9/output/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] /Users/ErikJhordan/.android/build-cache/368e4066432338625d0a46b7b1b9b8f6d9f7ff77/output/AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] /Users/ErikJhordan/.android/build-cache/a51d477f5f13a872795655fa69b070088625c924/output/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:26.0.0-alpha1] /Users/ErikJhordan/.android/build-cache/648508f8158924dce907cfb7ec74a03bc4f8ff2c/output/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:26.0.0-alpha1] /Users/ErikJhordan/.android/build-cache/111d8c2184ba5958a2b71b881ced8c4ea7787f49/output/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:cardview-v7:26.0.0-alpha1] /Users/ErikJhordan/.android/build-cache/4d8fa89251db590a6182f3e7fe9c16ece3c7ed5e/output/AndroidManifest.xml:20:5-44
+INJECTED from /Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/src/main/AndroidManifest.xml
+INJECTED from /Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/src/main/AndroidManifest.xml
+MERGED from [io.reactivex.rxjava2:rxandroid:2.0.1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/rxandroid-2.0.1.aar/679e5fa75e0097fd22d51485597d4e87/AndroidManifest.xml:19:5-43
+MERGED from [io.reactivex.rxjava2:rxandroid:2.0.1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/rxandroid-2.0.1.aar/679e5fa75e0097fd22d51485597d4e87/AndroidManifest.xml:19:5-43
+MERGED from [com.jakewharton:butterknife:8.4.0] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/butterknife-8.4.0.aar/a1ac255b78ff10f927cf24e553bcb4a1/AndroidManifest.xml:5:5-43
+MERGED from [com.jakewharton:butterknife:8.4.0] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/butterknife-8.4.0.aar/a1ac255b78ff10f927cf24e553bcb4a1/AndroidManifest.xml:5:5-43
+MERGED from [com.android.support:design:26.0.0-alpha1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/design-26.0.0-alpha1.aar/1690f3af37491d497de4e56e8858ee95/AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:design:26.0.0-alpha1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/design-26.0.0-alpha1.aar/1690f3af37491d497de4e56e8858ee95/AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.0-alpha1.aar/3980529e3f282774051695e48fc39486/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.0-alpha1.aar/3980529e3f282774051695e48fc39486/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:cardview-v7:26.0.0-alpha1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/cardview-v7-26.0.0-alpha1.aar/7c1f7bb86dbac03e7e711dd98220472e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:26.0.0-alpha1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/cardview-v7-26.0.0-alpha1.aar/7c1f7bb86dbac03e7e711dd98220472e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:26.0.0-alpha1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.0.0-alpha1.aar/0ffb46ed724f0129ab5636d1c863a830/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:26.0.0-alpha1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.0.0-alpha1.aar/0ffb46ed724f0129ab5636d1c863a830/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:26.0.0-alpha1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/transition-26.0.0-alpha1.aar/d71c288bf159b24c9d4d0dbe5abfd80a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:26.0.0-alpha1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/transition-26.0.0-alpha1.aar/d71c288bf159b24c9d4d0dbe5abfd80a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.0.0-alpha1.aar/b963d7a0fdab3ac4ddcce9a2c5f16bcb/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.0.0-alpha1.aar/b963d7a0fdab3ac4ddcce9a2c5f16bcb/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:26.0.0-alpha1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.0.0-alpha1.aar/731d457fcfa3fa006dcc5e8a33000795/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:26.0.0-alpha1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.0.0-alpha1.aar/731d457fcfa3fa006dcc5e8a33000795/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:26.0.0-alpha1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/support-v4-26.0.0-alpha1.aar/af3eb8de7a82b29bd4e880c3f273072a/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:26.0.0-alpha1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/support-v4-26.0.0-alpha1.aar/af3eb8de7a82b29bd4e880c3f273072a/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-media-compat:26.0.0-alpha1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.0.0-alpha1.aar/3fb3a42470e2ab1c6b2efbfe3719a4ae/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-media-compat:26.0.0-alpha1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.0.0-alpha1.aar/3fb3a42470e2ab1c6b2efbfe3719a4ae/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-fragment:26.0.0-alpha1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/support-fragment-26.0.0-alpha1.aar/4d7ffc1c2d6b4e88e6221243dd364259/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-fragment:26.0.0-alpha1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/support-fragment-26.0.0-alpha1.aar/4d7ffc1c2d6b4e88e6221243dd364259/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.0.0-alpha1.aar/6ced9ccd3bd1d0e0f993d685dda4ec80/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.0.0-alpha1.aar/6ced9ccd3bd1d0e0f993d685dda4ec80/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.0.0-alpha1.aar/eaaefd9558d61c88bae88a956d411a72/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.0.0-alpha1.aar/eaaefd9558d61c88bae88a956d411a72/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:26.0.0-alpha1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/support-compat-26.0.0-alpha1.aar/2961bdf09fd2b9a047c7cd416d484436/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:26.0.0-alpha1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/support-compat-26.0.0-alpha1.aar/2961bdf09fd2b9a047c7cd416d484436/AndroidManifest.xml:21:5-23:58
+INJECTED from /Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/src/main/AndroidManifest.xml
+INJECTED from /Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/src/main/AndroidManifest.xml
 	tools:overrideLibrary
-		ADDED from [com.android.support:design:26.0.0-alpha1] /Users/ErikJhordan/.android/build-cache/53767fe48438c90c7b2b23ec7086a0a66b6caafe/output/AndroidManifest.xml:23:9-59
+		ADDED from [com.android.support:design:26.0.0-alpha1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/design-26.0.0-alpha1.aar/1690f3af37491d497de4e56e8858ee95/AndroidManifest.xml:23:9-59
 	android:targetSdkVersion
 		INJECTED from /Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/src/main/AndroidManifest.xml
+		ADDED from /Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/src/main/AndroidManifest.xml
 	android:minSdkVersion
 		INJECTED from /Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/src/main/AndroidManifest.xml
+		ADDED from /Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/src/main/AndroidManifest.xml
 meta-data#android.support.VERSION
-ADDED from [com.android.support:design:26.0.0-alpha1] /Users/ErikJhordan/.android/build-cache/53767fe48438c90c7b2b23ec7086a0a66b6caafe/output/AndroidManifest.xml:25:5-27:41
-MERGED from [com.android.support:recyclerview-v7:26.0.0-alpha1] /Users/ErikJhordan/.android/build-cache/1ec66d042aacedf3ac7f0f6dcfd18b99fea9e5e2/output/AndroidManifest.xml:22:5-24:41
-MERGED from [com.android.support:transition:26.0.0-alpha1] /Users/ErikJhordan/.android/build-cache/9153de3b09c7c97f34cdcd77638485855c06fdec/output/AndroidManifest.xml:22:5-24:41
-MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] /Users/ErikJhordan/.android/build-cache/afc3dab9d0c3c4984da9981eab40054f94fe6bdf/output/AndroidManifest.xml:25:5-27:41
-MERGED from [com.android.support:support-v4:26.0.0-alpha1] /Users/ErikJhordan/.android/build-cache/7f80787e2ef61dbc3b9c53c293d4f03f3923e5c3/output/AndroidManifest.xml:25:5-27:41
-MERGED from [com.android.support:support-media-compat:26.0.0-alpha1] /Users/ErikJhordan/.android/build-cache/f2d6d07070bb8050f765ffe1e4ab095b1e45ae2f/output/AndroidManifest.xml:25:5-27:41
-MERGED from [com.android.support:support-fragment:26.0.0-alpha1] /Users/ErikJhordan/.android/build-cache/7ee0493d58f199851212985b0456d735bef4af42/output/AndroidManifest.xml:25:5-27:41
-MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] /Users/ErikJhordan/.android/build-cache/872d0563ea5b973348f2e65a04824242cd5f3ca9/output/AndroidManifest.xml:25:5-27:41
-MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] /Users/ErikJhordan/.android/build-cache/368e4066432338625d0a46b7b1b9b8f6d9f7ff77/output/AndroidManifest.xml:25:5-27:41
-MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] /Users/ErikJhordan/.android/build-cache/a51d477f5f13a872795655fa69b070088625c924/output/AndroidManifest.xml:22:5-24:41
-MERGED from [com.android.support:support-vector-drawable:26.0.0-alpha1] /Users/ErikJhordan/.android/build-cache/648508f8158924dce907cfb7ec74a03bc4f8ff2c/output/AndroidManifest.xml:22:5-24:41
-MERGED from [com.android.support:support-compat:26.0.0-alpha1] /Users/ErikJhordan/.android/build-cache/111d8c2184ba5958a2b71b881ced8c4ea7787f49/output/AndroidManifest.xml:25:5-27:41
-MERGED from [com.android.support:cardview-v7:26.0.0-alpha1] /Users/ErikJhordan/.android/build-cache/4d8fa89251db590a6182f3e7fe9c16ece3c7ed5e/output/AndroidManifest.xml:22:5-24:41
+ADDED from [com.android.support:design:26.0.0-alpha1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/design-26.0.0-alpha1.aar/1690f3af37491d497de4e56e8858ee95/AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.0-alpha1.aar/3980529e3f282774051695e48fc39486/AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.0-alpha1.aar/3980529e3f282774051695e48fc39486/AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:cardview-v7:26.0.0-alpha1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/cardview-v7-26.0.0-alpha1.aar/7c1f7bb86dbac03e7e711dd98220472e/AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:cardview-v7:26.0.0-alpha1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/cardview-v7-26.0.0-alpha1.aar/7c1f7bb86dbac03e7e711dd98220472e/AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:recyclerview-v7:26.0.0-alpha1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.0.0-alpha1.aar/0ffb46ed724f0129ab5636d1c863a830/AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:recyclerview-v7:26.0.0-alpha1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.0.0-alpha1.aar/0ffb46ed724f0129ab5636d1c863a830/AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:transition:26.0.0-alpha1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/transition-26.0.0-alpha1.aar/d71c288bf159b24c9d4d0dbe5abfd80a/AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:transition:26.0.0-alpha1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/transition-26.0.0-alpha1.aar/d71c288bf159b24c9d4d0dbe5abfd80a/AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.0.0-alpha1.aar/b963d7a0fdab3ac4ddcce9a2c5f16bcb/AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.0.0-alpha1.aar/b963d7a0fdab3ac4ddcce9a2c5f16bcb/AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:support-vector-drawable:26.0.0-alpha1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.0.0-alpha1.aar/731d457fcfa3fa006dcc5e8a33000795/AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:support-vector-drawable:26.0.0-alpha1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.0.0-alpha1.aar/731d457fcfa3fa006dcc5e8a33000795/AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:support-v4:26.0.0-alpha1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/support-v4-26.0.0-alpha1.aar/af3eb8de7a82b29bd4e880c3f273072a/AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-v4:26.0.0-alpha1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/support-v4-26.0.0-alpha1.aar/af3eb8de7a82b29bd4e880c3f273072a/AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-media-compat:26.0.0-alpha1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.0.0-alpha1.aar/3fb3a42470e2ab1c6b2efbfe3719a4ae/AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-media-compat:26.0.0-alpha1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.0.0-alpha1.aar/3fb3a42470e2ab1c6b2efbfe3719a4ae/AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-fragment:26.0.0-alpha1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/support-fragment-26.0.0-alpha1.aar/4d7ffc1c2d6b4e88e6221243dd364259/AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-fragment:26.0.0-alpha1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/support-fragment-26.0.0-alpha1.aar/4d7ffc1c2d6b4e88e6221243dd364259/AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.0.0-alpha1.aar/6ced9ccd3bd1d0e0f993d685dda4ec80/AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.0.0-alpha1.aar/6ced9ccd3bd1d0e0f993d685dda4ec80/AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.0.0-alpha1.aar/eaaefd9558d61c88bae88a956d411a72/AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.0.0-alpha1.aar/eaaefd9558d61c88bae88a956d411a72/AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-compat:26.0.0-alpha1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/support-compat-26.0.0-alpha1.aar/2961bdf09fd2b9a047c7cd416d484436/AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-compat:26.0.0-alpha1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/support-compat-26.0.0-alpha1.aar/2961bdf09fd2b9a047c7cd416d484436/AndroidManifest.xml:25:5-27:41
 	android:value
-		ADDED from [com.android.support:design:26.0.0-alpha1] /Users/ErikJhordan/.android/build-cache/53767fe48438c90c7b2b23ec7086a0a66b6caafe/output/AndroidManifest.xml:27:9-38
+		ADDED from [com.android.support:design:26.0.0-alpha1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/design-26.0.0-alpha1.aar/1690f3af37491d497de4e56e8858ee95/AndroidManifest.xml:27:9-38
 	android:name
-		ADDED from [com.android.support:design:26.0.0-alpha1] /Users/ErikJhordan/.android/build-cache/53767fe48438c90c7b2b23ec7086a0a66b6caafe/output/AndroidManifest.xml:26:9-47
+		ADDED from [com.android.support:design:26.0.0-alpha1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/design-26.0.0-alpha1.aar/1690f3af37491d497de4e56e8858ee95/AndroidManifest.xml:26:9-47

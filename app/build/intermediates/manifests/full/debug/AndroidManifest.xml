@@ -15,6 +15,7 @@
     <application
         android:name="io.github.erikcaffrey.kata_dagger2_mariokart.SuperMarioKartApplication"
         android:allowBackup="true"
+        android:debuggable="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
