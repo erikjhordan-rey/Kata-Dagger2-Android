@@ -4,13 +4,30 @@
             "outputFile": "/Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values-ky/values-ky.xml",
             "map": [
                 {
-                    "source": "/Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.0-alpha1.aar/3980529e3f282774051695e48fc39486/res/values-ky/values-ky.xml",
+                    "source": "/Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/3253223a5488fc4479a5e3675792496f/res/values-ky/values-ky.xml",
                     "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,159,267,390,485,604,688,795,912,990,1069,1150,1260,1367,1465,1571,1678,1779,1903,2006,2087",
-                        "endColumns": "103,107,122,94,118,83,106,116,77,78,80,109,106,97,105,106,100,123,102,80,100",
-                        "endOffsets": "154,262,385,480,599,683,790,907,985,1064,1145,1255,1362,1460,1566,1673,1774,1898,2001,2082,2183"
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,209,304,423,507,614,731,809,888,969,1079,1186,1284,1390,1497,1598,1759,1862",
+                        "endColumns": "103,94,118,83,106,116,77,78,80,109,106,97,105,106,100,160,102,80",
+                        "endOffsets": "204,299,418,502,609,726,804,883,964,1074,1181,1279,1385,1492,1593,1754,1857,1938"
+                    }
+                },
+                {
+                    "source": "/Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/support-compat-27.0.2.aar/7da63b8be7947f2436c1cf919b1fbd4d/res/values-ky/values-ky.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "20",
+                        "startColumns": "4",
+                        "startOffsets": "1943",
+                        "endColumns": "100",
+                        "endOffsets": "2039"
                     }
                 }
             ]

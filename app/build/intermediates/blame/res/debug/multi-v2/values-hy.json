@@ -4,13 +4,30 @@
             "outputFile": "/Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-hy/values-hy.xml",
             "map": [
                 {
-                    "source": "/Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.0-alpha1.aar/3980529e3f282774051695e48fc39486/res/values-hy/values-hy.xml",
+                    "source": "/Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/support-compat-27.0.2.aar/7da63b8be7947f2436c1cf919b1fbd4d/res/values-hy/values-hy.xml",
                     "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,158,266,389,490,600,689,795,910,992,1073,1158,1265,1372,1471,1581,1688,1788,1913,2012,2094",
-                        "endColumns": "102,107,122,100,109,88,105,114,81,80,84,106,106,98,109,106,99,124,98,81,100",
-                        "endOffsets": "153,261,384,485,595,684,790,905,987,1068,1153,1260,1367,1466,1576,1683,1783,1908,2007,2089,2190"
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "20",
+                        "startColumns": "4",
+                        "startOffsets": "1945",
+                        "endColumns": "100",
+                        "endOffsets": "2041"
+                    }
+                },
+                {
+                    "source": "/Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/3253223a5488fc4479a5e3675792496f/res/values-hy/values-hy.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,208,309,419,508,614,729,811,892,977,1084,1191,1290,1400,1507,1607,1764,1863",
+                        "endColumns": "102,100,109,88,105,114,81,80,84,106,106,98,109,106,99,156,98,81",
+                        "endOffsets": "203,304,414,503,609,724,806,887,972,1079,1186,1285,1395,1502,1602,1759,1858,1940"
                     }
                 }
             ]

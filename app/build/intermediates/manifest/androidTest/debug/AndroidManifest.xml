@@ -2,13 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="io.github.erikcaffrey.kata_dagger2_mariokart.test">
 
-    <uses-sdk android:minSdkVersion="17" android:targetSdkVersion="26" />
+    <uses-sdk android:minSdkVersion="17" android:targetSdkVersion="27" />
 
     <application android:debuggable="true" >
         <uses-library android:name="android.test.runner" />
     </application>
 
-    <instrumentation android:name="android.support.test.runner.AndroidJUnitRunner"
+    <instrumentation android:name="android.test.InstrumentationTestRunner"
                      android:targetPackage="io.github.erikcaffrey.kata_dagger2_mariokart"
                      android:handleProfiling="false"
                      android:functionalTest="false"
