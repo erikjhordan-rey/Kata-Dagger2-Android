@@ -14,18 +14,16 @@
  * limitations under the License.
  */
 
-package io.github.erikcaffrey.kata_dagger2_mariokart.domain.usecase;
+package io.github.erikcaffrey.kata_dagger2_mariokart.domain.usecase
 
-import io.reactivex.observers.DisposableObserver;
+import io.github.erikcaffrey.kata_dagger2_mariokart.data.Repository
+import io.github.erikcaffrey.kata_dagger2_mariokart.domain.model.Character
+import io.reactivex.Observable
+import javax.inject.Inject
 
-public abstract class UseCaseObserver<T> extends DisposableObserver<T> {
+class GetCharacters @Inject constructor(private val repository: Repository) : UseCase<List<Character>>() {
 
-  @Override public void onComplete() {
-  }
-
-  @Override public void onError(Throwable e) {
-  }
-
-  @Override public void onNext(T t) {
+  override fun buildUseCaseObservable(): Observable<List<Character>> {
+    return repository.all
   }
 }

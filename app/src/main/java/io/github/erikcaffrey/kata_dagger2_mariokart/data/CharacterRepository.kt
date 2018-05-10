@@ -14,21 +14,17 @@
  * limitations under the License.
  */
 
-package io.github.erikcaffrey.kata_dagger2_mariokart.domain.usecase;
+package io.github.erikcaffrey.kata_dagger2_mariokart.data
 
-import io.github.erikcaffrey.kata_dagger2_mariokart.data.Repository;
-import io.reactivex.Observable;
-import javax.inject.Inject;
+import io.github.erikcaffrey.kata_dagger2_mariokart.domain.model.Character
+import io.reactivex.Observable
+import java.util.concurrent.TimeUnit
+import javax.inject.Inject
 
-public class GetCharacters extends UseCase {
+class CharacterRepository @Inject constructor(dataSource: DataSource) : Repository {
 
-  private final Repository repository;
+  private val characters: List<Character> = dataSource.provideCharacterList()
 
-  @Inject public GetCharacters(Repository repository) {
-    this.repository = repository;
-  }
-
-  @Override Observable buildUseCaseObservable() {
-    return repository.getAll();
-  }
+  override val all: Observable<List<Character>>
+    get() = Observable.just(characters).delay(2000L, TimeUnit.MILLISECONDS)
 }

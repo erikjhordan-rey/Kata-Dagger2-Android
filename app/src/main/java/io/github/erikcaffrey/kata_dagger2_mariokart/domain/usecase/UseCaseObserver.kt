@@ -14,29 +14,15 @@
  * limitations under the License.
  */
 
-package io.github.erikcaffrey.kata_dagger2_mariokart.view.presenter;
+package io.github.erikcaffrey.kata_dagger2_mariokart.domain.usecase
 
-public class Presenter<T extends Presenter.View> {
+import io.reactivex.observers.DisposableObserver
 
-  private T view;
+abstract class UseCaseObserver<T> : DisposableObserver<T>() {
 
-  public void setView(T view) {
-    this.view = view;
-  }
+  override fun onComplete() {}
 
-  public T getView() {
-    return view;
-  }
+  override fun onError(e: Throwable) {}
 
-  public void initialize() {
-
-  }
-
-  public void terminate() {
-
-  }
-
-  public interface View {
-
-  }
+  override fun onNext(t: T) {}
 }
