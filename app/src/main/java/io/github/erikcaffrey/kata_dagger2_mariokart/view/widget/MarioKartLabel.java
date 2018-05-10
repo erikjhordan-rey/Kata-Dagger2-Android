@@ -2,10 +2,10 @@ package io.github.erikcaffrey.kata_dagger2_mariokart.view.widget;
 
 import android.content.Context;
 import android.graphics.Typeface;
+import android.support.v7.widget.AppCompatTextView;
 import android.util.AttributeSet;
-import android.widget.TextView;
 
-public class MarioKartLabel extends TextView {
+public class MarioKartLabel extends AppCompatTextView {
 
     private final static String SUPER_MARIO_FONT = "SuperMario256.ttf";
 

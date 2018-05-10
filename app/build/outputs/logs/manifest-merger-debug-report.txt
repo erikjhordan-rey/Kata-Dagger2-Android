@@ -1,0 +1,103 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/src/main/AndroidManifest.xml:2:1-23:12
+INJECTED from /Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/src/main/AndroidManifest.xml:2:1-23:12
+INJECTED from /Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/src/main/AndroidManifest.xml:2:1-23:12
+INJECTED from /Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/src/main/AndroidManifest.xml:2:1-23:12
+MERGED from [com.jakewharton:butterknife:8.8.1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/butterknife-8.8.1.aar/0cc29798965ab02d3e9bd8aefe08b559/AndroidManifest.xml:2:1-7:12
+MERGED from [com.android.support:appcompat-v7:27.1.1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/57f8fe3b1963c4683d737460956a87b3/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:27.1.1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/bec04f2e67bb36c8bde563169e84795f/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/5d7fc6619c6af9bcf0924e87528692e5/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:27.1.1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/43c41e90a78aec17eea5b7a6329e3023/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:27.1.1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/7775f9bb39e3bd0f45282ad72b5da936/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/df410744a52243b0b296e6065e202e32/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:27.1.1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/e9e16a7a6178fce3561839e376151f7f/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/14df0a67f0a067565cceb73f51cfe27b/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/0d89e36c3a64b1c2c454e972727e486a/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/800c7d8fed19daed7ac4f5890aa29149/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.0] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/96db99012f87629ba33881f65cdd15be/AndroidManifest.xml:17:1-22:12
+INJECTED from /Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/src/main/AndroidManifest.xml:2:1-23:12
+INJECTED from /Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/src/main/AndroidManifest.xml:2:1-23:12
+INJECTED from /Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/src/main/AndroidManifest.xml:2:1-23:12
+	package
+		ADDED from /Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/src/main/AndroidManifest.xml:3:5-59
+		INJECTED from /Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/src/main/AndroidManifest.xml
+		ADDED from /Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/src/main/AndroidManifest.xml:2:1-23:12
+		INJECTED from /Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/src/main/AndroidManifest.xml
+		ADDED from /Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/src/main/AndroidManifest.xml:2:1-23:12
+		INJECTED from /Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/src/main/AndroidManifest.xml:2:11-69
+application
+ADDED from /Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/src/main/AndroidManifest.xml:5:3-21:17
+	android:supportsRtl
+		ADDED from /Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/src/main/AndroidManifest.xml:10:7-33
+	android:label
+		ADDED from /Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/src/main/AndroidManifest.xml:9:7-39
+	android:icon
+		ADDED from /Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/src/main/AndroidManifest.xml:8:7-41
+	android:allowBackup
+		ADDED from /Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/src/main/AndroidManifest.xml:7:7-33
+	android:theme
+		ADDED from /Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/src/main/AndroidManifest.xml:11:7-38
+	android:name
+		ADDED from /Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/src/main/AndroidManifest.xml:6:7-47
+activity#io.github.erikcaffrey.kata_dagger2_mariokart.view.ui.PrincessPeachActivity
+ADDED from /Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/src/main/AndroidManifest.xml:13:5-20:16
+	android:theme
+		ADDED from /Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/src/main/AndroidManifest.xml:14:9-52
+	android:name
+		ADDED from /Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/src/main/AndroidManifest.xml:13:15-60
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/src/main/AndroidManifest.xml:15:7-19:23
+action#android.intent.action.MAIN
+ADDED from /Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/src/main/AndroidManifest.xml:16:9-60
+	android:name
+		ADDED from /Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/src/main/AndroidManifest.xml:16:17-58
+category#android.intent.category.LAUNCHER
+ADDED from /Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/src/main/AndroidManifest.xml:18:9-68
+	android:name
+		ADDED from /Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/src/main/AndroidManifest.xml:18:19-66
+uses-sdk
+INJECTED from /Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/src/main/AndroidManifest.xml
+INJECTED from /Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/src/main/AndroidManifest.xml
+MERGED from [com.jakewharton:butterknife:8.8.1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/butterknife-8.8.1.aar/0cc29798965ab02d3e9bd8aefe08b559/AndroidManifest.xml:5:5-43
+MERGED from [com.jakewharton:butterknife:8.8.1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/butterknife-8.8.1.aar/0cc29798965ab02d3e9bd8aefe08b559/AndroidManifest.xml:5:5-43
+MERGED from [com.android.support:appcompat-v7:27.1.1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/57f8fe3b1963c4683d737460956a87b3/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.1.1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/57f8fe3b1963c4683d737460956a87b3/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/bec04f2e67bb36c8bde563169e84795f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/bec04f2e67bb36c8bde563169e84795f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/5d7fc6619c6af9bcf0924e87528692e5/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/5d7fc6619c6af9bcf0924e87528692e5/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/43c41e90a78aec17eea5b7a6329e3023/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/43c41e90a78aec17eea5b7a6329e3023/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/7775f9bb39e3bd0f45282ad72b5da936/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/7775f9bb39e3bd0f45282ad72b5da936/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/df410744a52243b0b296e6065e202e32/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/df410744a52243b0b296e6065e202e32/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/e9e16a7a6178fce3561839e376151f7f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/e9e16a7a6178fce3561839e376151f7f/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/14df0a67f0a067565cceb73f51cfe27b/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/14df0a67f0a067565cceb73f51cfe27b/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/0d89e36c3a64b1c2c454e972727e486a/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/0d89e36c3a64b1c2c454e972727e486a/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/800c7d8fed19daed7ac4f5890aa29149/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/800c7d8fed19daed7ac4f5890aa29149/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/96db99012f87629ba33881f65cdd15be/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] /Users/ErikJhordan/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/96db99012f87629ba33881f65cdd15be/AndroidManifest.xml:20:5-44
+INJECTED from /Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/src/main/AndroidManifest.xml
+INJECTED from /Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/src/main/AndroidManifest.xml
+		ADDED from /Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/src/main/AndroidManifest.xml
+		ADDED from /Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/ErikJhordan/AndroidStudioProjects/Kata-Dagger2-MarioKart/app/src/main/AndroidManifest.xml
