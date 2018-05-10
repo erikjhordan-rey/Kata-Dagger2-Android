@@ -1,4 +1,4 @@
-# Kata-Dagger2-MarioKart PART 1
+# Kata-Dagger2-MarioKart - PART 1
 
 MarioKart Kata for Android Developers The main goal is to practice Dependency injection using Dagger 2.
 
@@ -12,8 +12,8 @@ Libraries used on the sample project
 
 ## Screenshots
 
+<img src="./art/device-2017-01-09-021440.png" width="260">
 
-![](./art/device-2017-01-09-021440.png)
 
 
 Do you want to contribute?
