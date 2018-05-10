@@ -19,7 +19,7 @@ package io.github.erikcaffrey.kata_dagger2_mariokart.view.activity
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.os.PersistableBundle
+import android.support.v4.content.ContextCompat
 import android.support.v7.app.AppCompatActivity
 import android.view.View
 import io.github.erikcaffrey.kata_dagger2_mariokart.R
@@ -29,6 +29,7 @@ import io.github.erikcaffrey.kata_dagger2_mariokart.view.adapter.CharacterDetail
 import io.github.erikcaffrey.kata_dagger2_mariokart.view.fragment.CharacterDetailFragment
 import io.github.erikcaffrey.kata_dagger2_mariokart.view.fragment.CharacterFragment
 import io.github.erikcaffrey.kata_dagger2_mariokart.view.presenter.CharactersPresenter
+import kotlinx.android.synthetic.main.activity_characters.*
 import kotlinx.android.synthetic.main.activity_detail_character.*
 import javax.inject.Inject
 
@@ -37,8 +38,8 @@ class CharacterDetailActivity : AppCompatActivity(), CharactersPresenter.View {
   private lateinit var adapter: CharacterDetailPagerAdapter
   @Inject lateinit var presenter: CharactersPresenter
 
-  override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
-    super.onCreate(savedInstanceState, persistentState)
+  override fun onCreate(savedInstanceState: Bundle?) {
+    super.onCreate(savedInstanceState)
     setContentView(R.layout.activity_detail_character)
     initializeDagger()
     initializeToolbar()
@@ -61,7 +62,7 @@ class CharacterDetailActivity : AppCompatActivity(), CharactersPresenter.View {
 
   override fun hideLoading() {
     pager.visibility = View.VISIBLE
-    progress_detail.visibility = View.GONE
+    progress_character_detail.visibility = View.GONE
   }
 
   private fun initializeDagger() {
@@ -70,8 +71,13 @@ class CharacterDetailActivity : AppCompatActivity(), CharactersPresenter.View {
   }
 
   private fun initializeToolbar() {
-    actionBar.setDisplayShowTitleEnabled(true)
-    actionBar.setDisplayHomeAsUpEnabled(true)
+    setSupportActionBar(toolbar)
+    val actionBar = supportActionBar
+
+    actionBar?.run {
+      setDisplayShowTitleEnabled(true)
+      setDisplayHomeAsUpEnabled(true)
+    }
   }
 
   private fun initializeAdapter() {
