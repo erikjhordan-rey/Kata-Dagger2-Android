@@ -7,10 +7,9 @@ import android.graphics.Paint
 import android.graphics.Path
 import android.graphics.PorterDuff
 import android.graphics.Region
-import android.support.v7.widget.AppCompatImageView
 import android.util.AttributeSet
 import android.view.View
-import android.widget.ImageView
+import androidx.appcompat.widget.AppCompatImageView
 
 class MarioKartImage @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) :
     AppCompatImageView(context, attrs, defStyleAttr) {

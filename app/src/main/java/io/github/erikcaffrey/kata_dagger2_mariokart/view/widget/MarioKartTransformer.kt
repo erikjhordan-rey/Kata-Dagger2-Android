@@ -1,11 +1,11 @@
 package io.github.erikcaffrey.kata_dagger2_mariokart.view.widget
 
-import android.support.v4.view.ViewPager
 import android.view.View
+import androidx.viewpager.widget.ViewPager
 import io.github.erikcaffrey.kata_dagger2_mariokart.view.adapter.CharacterAdapter
 
 class MarioKartTransformer(private val pager: ViewPager,
-    private val characterAdapter: CharacterAdapter) : ViewPager.OnPageChangeListener, ViewPager.PageTransformer {
+                           private val characterAdapter: CharacterAdapter) : ViewPager.OnPageChangeListener, ViewPager.PageTransformer {
   private var lastOffset: Float = 0.toFloat()
   private var scalingEnabled: Boolean = false
 

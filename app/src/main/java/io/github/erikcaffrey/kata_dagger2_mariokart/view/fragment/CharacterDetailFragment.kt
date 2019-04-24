@@ -1,17 +1,27 @@
 package io.github.erikcaffrey.kata_dagger2_mariokart.view.fragment
 
 import android.os.Bundle
-import android.support.v4.app.Fragment
-import android.support.v7.app.AppCompatActivity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
 import io.github.erikcaffrey.kata_dagger2_mariokart.R
 import io.github.erikcaffrey.kata_dagger2_mariokart.domain.model.Abilities
 import io.github.erikcaffrey.kata_dagger2_mariokart.domain.model.Character
 import io.github.erikcaffrey.kata_dagger2_mariokart.view.fragment.CharacterFragment.Companion.EXTRA_CHARACTER
 import io.github.erikcaffrey.kata_dagger2_mariokart.view.widget.SkillView
-import kotlinx.android.synthetic.main.fragment_detail_character.*
+import kotlinx.android.synthetic.main.fragment_detail_character.image_cover
+import kotlinx.android.synthetic.main.fragment_detail_character.image_profile
+import kotlinx.android.synthetic.main.fragment_detail_character.label_description
+import kotlinx.android.synthetic.main.fragment_detail_character.label_name
+import kotlinx.android.synthetic.main.fragment_detail_character.skill_accelerate
+import kotlinx.android.synthetic.main.fragment_detail_character.skill_brake
+import kotlinx.android.synthetic.main.fragment_detail_character.skill_drift
+import kotlinx.android.synthetic.main.fragment_detail_character.skill_look_behind
+import kotlinx.android.synthetic.main.fragment_detail_character.skill_reverse
+import kotlinx.android.synthetic.main.fragment_detail_character.skill_steer
+import kotlinx.android.synthetic.main.fragment_detail_character.toolbar
 
 class CharacterDetailFragment : Fragment() {
 

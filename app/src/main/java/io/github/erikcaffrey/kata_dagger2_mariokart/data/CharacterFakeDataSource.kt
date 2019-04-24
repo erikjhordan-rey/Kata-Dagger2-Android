@@ -23,11 +23,7 @@ import java.util.LinkedList
 
 class CharacterFakeDataSource : DataSource {
 
-  private val characters: MutableList<Character>
-
-  init {
-    this.characters = LinkedList()
-  }
+  private val characters: MutableList<Character> = mutableListOf()
 
   private val marioBros: Character
     get() {

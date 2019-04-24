@@ -1,13 +1,16 @@
 package io.github.erikcaffrey.kata_dagger2_mariokart.view.adapter;
 
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentStatePagerAdapter;
-import android.support.v7.widget.CardView;
 import android.view.ViewGroup;
-import io.github.erikcaffrey.kata_dagger2_mariokart.view.fragment.CharacterFragment;
+
+import androidx.cardview.widget.CardView;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentStatePagerAdapter;
+
 import java.util.ArrayList;
 import java.util.List;
+
+import io.github.erikcaffrey.kata_dagger2_mariokart.view.fragment.CharacterFragment;
 
 public class CharacterPagerAdapter extends FragmentStatePagerAdapter implements CharacterAdapter {
 

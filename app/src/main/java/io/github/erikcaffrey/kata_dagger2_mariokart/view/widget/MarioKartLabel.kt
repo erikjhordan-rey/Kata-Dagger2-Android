@@ -18,8 +18,8 @@ package io.github.erikcaffrey.kata_dagger2_mariokart.view.widget
 
 import android.content.Context
 import android.graphics.Typeface
-import android.support.v7.widget.AppCompatTextView
 import android.util.AttributeSet
+import androidx.appcompat.widget.AppCompatTextView
 
 class MarioKartLabel @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) :
     AppCompatTextView(context, attrs, defStyleAttr) {

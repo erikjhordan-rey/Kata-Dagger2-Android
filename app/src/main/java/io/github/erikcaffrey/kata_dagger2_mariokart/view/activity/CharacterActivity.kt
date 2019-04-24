@@ -17,9 +17,9 @@
 package io.github.erikcaffrey.kata_dagger2_mariokart.view.activity
 
 import android.os.Bundle
-import android.support.v4.content.ContextCompat
-import android.support.v7.app.AppCompatActivity
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import io.github.erikcaffrey.kata_dagger2_mariokart.R
 import io.github.erikcaffrey.kata_dagger2_mariokart.SuperMarioKartApplication
 import io.github.erikcaffrey.kata_dagger2_mariokart.domain.model.Character
@@ -28,7 +28,9 @@ import io.github.erikcaffrey.kata_dagger2_mariokart.view.fragment.CharacterFragm
 import io.github.erikcaffrey.kata_dagger2_mariokart.view.presenter.CharactersPresenter
 import io.github.erikcaffrey.kata_dagger2_mariokart.view.utils.UIUtils
 import io.github.erikcaffrey.kata_dagger2_mariokart.view.widget.MarioKartTransformer
-import kotlinx.android.synthetic.main.activity_characters.*
+import kotlinx.android.synthetic.main.activity_characters.progress_detail
+import kotlinx.android.synthetic.main.activity_characters.toolbar
+import kotlinx.android.synthetic.main.activity_characters.view_pager
 import javax.inject.Inject
 
 class CharacterActivity : AppCompatActivity(), CharactersPresenter.View {

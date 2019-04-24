@@ -17,25 +17,26 @@
 package io.github.erikcaffrey.kata_dagger2_mariokart.view.fragment
 
 import android.os.Bundle
-import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.cardview.widget.CardView
+import androidx.fragment.app.Fragment
 import io.github.erikcaffrey.kata_dagger2_mariokart.R
 import io.github.erikcaffrey.kata_dagger2_mariokart.domain.model.Character
 import io.github.erikcaffrey.kata_dagger2_mariokart.view.activity.CharacterDetailActivity
 import io.github.erikcaffrey.kata_dagger2_mariokart.view.adapter.CharacterAdapter
-import kotlinx.android.synthetic.main.fragment_character.*
-import android.support.v7.widget.CardView
-
-
+import kotlinx.android.synthetic.main.fragment_character.button_name
+import kotlinx.android.synthetic.main.fragment_character.cardView
+import kotlinx.android.synthetic.main.fragment_character.image_profile
+import kotlinx.android.synthetic.main.fragment_character.label_position
 
 class CharacterFragment : Fragment() {
 
   private val character: Character
     get() = arguments?.getSerializable(EXTRA_CHARACTER) as Character
 
-  lateinit  var characterCardView:CardView
+  lateinit  var characterCardView: CardView
   override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
       savedInstanceState: Bundle?): View? {
     return inflater.inflate(R.layout.fragment_character, container, false)
