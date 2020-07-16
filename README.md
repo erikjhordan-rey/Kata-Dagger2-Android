@@ -1,6 +1,6 @@
 # Dagger2-Kata
 
-MarioKart Kata for Android Developers is a Kata] (https://erikjhordan-rey.github.io/blog/2016/07/07/ANDROID-kata-dagger2.html) to practice Dependency injection using Dagger 2. (kata spanish).
+[Dagger2 - Kata](https://erikjhordan-rey.github.io/blog/2016/07/07/ANDROID-kata-dagger2.html) for android developers to practice Dependency injection.
 
 
 ## Screenshots
@@ -38,8 +38,3 @@ License
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
     See the License for the specific language governing permissions and
     limitations under the License.
-
-
-[1]: https://github.com/JakeWharton/butterknife
-[2]: https://github.com/ReactiveX/RxAndroid
-[3]: https://github.com/google/dagger
