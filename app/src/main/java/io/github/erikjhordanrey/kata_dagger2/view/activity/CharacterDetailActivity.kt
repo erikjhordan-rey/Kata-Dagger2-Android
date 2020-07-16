@@ -75,6 +75,7 @@ class CharacterDetailActivity : AppCompatActivity(), CharactersPresenter.View {
 
     private fun initializeAdapter() {
         adapter = CharacterDetailPagerAdapter(supportFragmentManager)
+        binding.pager.offscreenPageLimit = 2
         binding.pager.adapter = adapter
     }
 
