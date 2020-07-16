@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="io.github.erikcaffrey.kata_dagger2_mariokart">
+    package="io.github.erikjhordanrey.kata_dagger2">
 
   <application
       android:allowBackup="true"

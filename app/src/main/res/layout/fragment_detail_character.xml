@@ -30,7 +30,7 @@
           tools:ignore="ContentDescription"
           />
 
-      <io.github.erikcaffrey.kata_dagger2_mariokart.view.widget.MarioKartImage
+      <io.github.erikjhordanrey.kata_dagger2.view.widget.MarioKartImage
           android:id="@+id/image_profile"
           android:layout_width="100dp"
           android:layout_height="100dp"
@@ -91,39 +91,39 @@
           android:textSize="28sp"
           />
 
-      <io.github.erikcaffrey.kata_dagger2_mariokart.view.widget.SkillView
+      <io.github.erikjhordanrey.kata_dagger2.view.widget.SkillView
           android:id="@+id/skill_accelerate"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:layout_marginTop="24dp"
           />
 
-      <io.github.erikcaffrey.kata_dagger2_mariokart.view.widget.SkillView
+      <io.github.erikjhordanrey.kata_dagger2.view.widget.SkillView
           android:id="@+id/skill_steer"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           />
 
-      <io.github.erikcaffrey.kata_dagger2_mariokart.view.widget.SkillView
+      <io.github.erikjhordanrey.kata_dagger2.view.widget.SkillView
           android:id="@+id/skill_brake"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           />
 
-      <io.github.erikcaffrey.kata_dagger2_mariokart.view.widget.SkillView
+      <io.github.erikjhordanrey.kata_dagger2.view.widget.SkillView
           android:id="@+id/skill_reverse"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           />
 
 
-      <io.github.erikcaffrey.kata_dagger2_mariokart.view.widget.SkillView
+      <io.github.erikjhordanrey.kata_dagger2.view.widget.SkillView
           android:id="@+id/skill_look_behind"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           />
 
-      <io.github.erikcaffrey.kata_dagger2_mariokart.view.widget.SkillView
+      <io.github.erikjhordanrey.kata_dagger2.view.widget.SkillView
           android:id="@+id/skill_drift"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"

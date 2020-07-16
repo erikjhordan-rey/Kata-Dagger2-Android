@@ -6,7 +6,7 @@ apply plugin: 'kotlin-kapt'
 android {
     compileSdkVersion 29
     defaultConfig {
-        applicationId "io.github.erikcaffrey.kata_dagger2_mariokart"
+        applicationId "io.github.erikjhordanrey.kata_dagger2"
         minSdkVersion 17
         targetSdkVersion 29
         versionCode 1
