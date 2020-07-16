@@ -20,69 +20,69 @@ import java.io.Serializable
 
 class Character(builder: Builder) : Serializable {
 
-  val id: String?
-  val name: String?
-  val photo: Int
-  val cover: Int
-  val description: String?
-  val abilities: Abilities?
+    val id: String?
+    val name: String?
+    val photo: Int
+    val cover: Int
+    val description: String?
+    val abilities: Abilities?
 
-  init {
-    this.id = builder.id
-    this.name = builder.name
-    this.photo = builder.photo
-    this.cover = builder.cover
-    this.description = builder.description
-    this.abilities = builder.abilities
-  }
-
-  class Builder private constructor() {
-    var id: String? = null
-    var name: String? = null
-    var photo: Int = 0
-    var cover: Int = 0
-    var description: String? = null
-    var abilities: Abilities? = null
-
-    fun setId(id: String): Builder {
-      this.id = id
-      return this
+    init {
+        this.id = builder.id
+        this.name = builder.name
+        this.photo = builder.photo
+        this.cover = builder.cover
+        this.description = builder.description
+        this.abilities = builder.abilities
     }
 
-    fun setName(name: String): Builder {
-      this.name = name
-      return this
-    }
+    class Builder private constructor() {
+        var id: String? = null
+        var name: String? = null
+        var photo: Int = 0
+        var cover: Int = 0
+        var description: String? = null
+        var abilities: Abilities? = null
 
-    fun setPhoto(photo: Int): Builder {
-      this.photo = photo
-      return this
-    }
+        fun setId(id: String): Builder {
+            this.id = id
+            return this
+        }
 
-    fun setCover(cover: Int): Builder {
-      this.cover = cover
-      return this
-    }
+        fun setName(name: String): Builder {
+            this.name = name
+            return this
+        }
 
-    fun setDescription(description: String): Builder {
-      this.description = description
-      return this
-    }
+        fun setPhoto(photo: Int): Builder {
+            this.photo = photo
+            return this
+        }
 
-    fun setAbilities(abilities: Abilities): Builder {
-      this.abilities = abilities
-      return this
-    }
+        fun setCover(cover: Int): Builder {
+            this.cover = cover
+            return this
+        }
 
-    fun build(): Character {
-      return Character(this)
-    }
+        fun setDescription(description: String): Builder {
+            this.description = description
+            return this
+        }
 
-    companion object {
+        fun setAbilities(abilities: Abilities): Builder {
+            this.abilities = abilities
+            return this
+        }
 
-      fun create(): Builder {
-        return Builder()
-      }
+        fun build(): Character {
+            return Character(this)
+        }
+
+        companion object {
+
+            fun create(): Builder {
+                return Builder()
+            }
+        }
     }
-  }
 }

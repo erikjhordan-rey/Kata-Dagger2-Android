@@ -21,7 +21,7 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import io.github.erikjhordanrey.kata_dagger2.R
-import io.github.erikjhordanrey.kata_dagger2.SuperMarioKartApplication
+import io.github.erikjhordanrey.kata_dagger2.App
 import io.github.erikjhordanrey.kata_dagger2.domain.model.Character
 import io.github.erikjhordanrey.kata_dagger2.view.adapter.CharacterPagerAdapter
 import io.github.erikjhordanrey.kata_dagger2.view.fragment.CharacterFragment
@@ -65,7 +65,7 @@ class CharacterActivity : AppCompatActivity(), CharactersPresenter.View {
   }
 
   private fun initializeDagger() {
-    val app = application as SuperMarioKartApplication
+    val app = application as App
     app.charactersComponent.inject(this)
   }
 

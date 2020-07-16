@@ -7,7 +7,7 @@
       android:icon="@mipmap/ic_launcher"
       android:label="@string/app_name"
       android:supportsRtl="true"
-      android:name=".SuperMarioKartApplication"
+      android:name=".App"
       android:theme="@style/AppTheme">
     <activity android:name=".view.activity.CharacterActivity"
         android:theme="@style/AppTheme.NoActionBar">

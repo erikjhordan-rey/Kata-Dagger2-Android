@@ -23,7 +23,7 @@ import javax.inject.Inject
 
 class GetCharacters @Inject constructor(private val repository: Repository) : UseCase<List<Character>>() {
 
-  override fun buildUseCaseObservable(): Observable<List<Character>> {
-    return repository.all
-  }
+    override fun buildUseCaseObservable(): Observable<List<Character>> {
+        return repository.all
+    }
 }

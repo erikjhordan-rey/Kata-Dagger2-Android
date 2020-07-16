@@ -9,7 +9,7 @@ import javax.inject.Singleton
 @Component(modules = [CharactersModule::class])
 interface CharactersComponent {
 
-  fun inject(characterActivity: CharacterActivity)
+    fun inject(characterActivity: CharacterActivity)
 
-  fun inject(characterDetailActivity: CharacterDetailActivity)
+    fun inject(characterDetailActivity: CharacterDetailActivity)
 }

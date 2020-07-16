@@ -20,70 +20,70 @@ import java.io.Serializable
 
 class Abilities private constructor(builder: Builder) : Serializable {
 
-  val accelerate: Int
-  val steer: Int
-  val brake: Int
-  val reverse: Int
-  val lookBehind: Int
-  val drift: Int
+    val accelerate: Int
+    val steer: Int
+    val brake: Int
+    val reverse: Int
+    val lookBehind: Int
+    val drift: Int
 
-  init {
-    this.accelerate = builder.accelerate
-    this.steer = builder.steer
-    this.brake = builder.brake
-    this.reverse = builder.reverse
-    this.lookBehind = builder.lookBehind
-    this.drift = builder.drift
-  }
-
-  class Builder private constructor() {
-
-    var accelerate: Int = 0
-    var steer: Int = 0
-    var brake: Int = 0
-    var reverse: Int = 0
-    var lookBehind: Int = 0
-    var drift: Int = 0
-
-    fun setAccelerate(accelerate: Int): Builder {
-      this.accelerate = accelerate
-      return this
+    init {
+        this.accelerate = builder.accelerate
+        this.steer = builder.steer
+        this.brake = builder.brake
+        this.reverse = builder.reverse
+        this.lookBehind = builder.lookBehind
+        this.drift = builder.drift
     }
 
-    fun setSteer(steer: Int): Builder {
-      this.steer = steer
-      return this
-    }
+    class Builder private constructor() {
 
-    fun setBrake(brake: Int): Builder {
-      this.brake = brake
-      return this
-    }
+        var accelerate: Int = 0
+        var steer: Int = 0
+        var brake: Int = 0
+        var reverse: Int = 0
+        var lookBehind: Int = 0
+        var drift: Int = 0
 
-    fun setReverse(reverse: Int): Builder {
-      this.reverse = reverse
-      return this
-    }
+        fun setAccelerate(accelerate: Int): Builder {
+            this.accelerate = accelerate
+            return this
+        }
 
-    fun setLookBehind(lookBehind: Int): Builder {
-      this.lookBehind = lookBehind
-      return this
-    }
+        fun setSteer(steer: Int): Builder {
+            this.steer = steer
+            return this
+        }
 
-    fun setDrift(drift: Int): Builder {
-      this.drift = drift
-      return this
-    }
+        fun setBrake(brake: Int): Builder {
+            this.brake = brake
+            return this
+        }
 
-    fun build(): Abilities {
-      return Abilities(this)
-    }
+        fun setReverse(reverse: Int): Builder {
+            this.reverse = reverse
+            return this
+        }
 
-    companion object {
+        fun setLookBehind(lookBehind: Int): Builder {
+            this.lookBehind = lookBehind
+            return this
+        }
 
-      fun create(): Builder {
-        return Builder()
-      }
+        fun setDrift(drift: Int): Builder {
+            this.drift = drift
+            return this
+        }
+
+        fun build(): Abilities {
+            return Abilities(this)
+        }
+
+        companion object {
+
+            fun create(): Builder {
+                return Builder()
+            }
+        }
     }
-  }
 }

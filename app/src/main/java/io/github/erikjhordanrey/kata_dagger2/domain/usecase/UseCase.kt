@@ -24,22 +24,22 @@ import io.reactivex.schedulers.Schedulers
 
 abstract class UseCase<T> {
 
-  private val compositeDisposable: CompositeDisposable = CompositeDisposable()
+    private val compositeDisposable: CompositeDisposable = CompositeDisposable()
 
-  fun execute(disposableObserver: DisposableObserver<T>) {
-    val observable = this.buildUseCaseObservable()
-        .subscribeOn(Schedulers.io())
-        .observeOn(AndroidSchedulers.mainThread())
+    fun execute(disposableObserver: DisposableObserver<T>) {
+        val observable = this.buildUseCaseObservable()
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
 
-    val observer = observable.subscribeWith(disposableObserver)
-    compositeDisposable.add(observer)
-  }
-
-  fun dispose() {
-    if (!compositeDisposable.isDisposed) {
-      compositeDisposable.dispose()
+        val observer = observable.subscribeWith(disposableObserver)
+        compositeDisposable.add(observer)
     }
-  }
 
-  abstract fun buildUseCaseObservable(): Observable<T>
+    fun dispose() {
+        if (!compositeDisposable.isDisposed) {
+            compositeDisposable.dispose()
+        }
+    }
+
+    abstract fun buildUseCaseObservable(): Observable<T>
 }

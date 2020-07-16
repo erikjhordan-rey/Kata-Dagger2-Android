@@ -5,13 +5,12 @@ import io.github.erikjhordanrey.kata_dagger2.di.CharactersComponent
 import io.github.erikjhordanrey.kata_dagger2.di.CharactersModule
 import io.github.erikjhordanrey.kata_dagger2.di.DaggerCharactersComponent
 
-class SuperMarioKartApplication : Application() {
+class App : Application() {
 
-  lateinit var charactersComponent: CharactersComponent
+    lateinit var charactersComponent: CharactersComponent
 
-  override fun onCreate() {
-    super.onCreate()
-
-    charactersComponent = DaggerCharactersComponent.builder().charactersModule(CharactersModule()).build()
-  }
+    override fun onCreate() {
+        super.onCreate()
+        charactersComponent = DaggerCharactersComponent.builder().charactersModule(CharactersModule()).build()
+    }
 }

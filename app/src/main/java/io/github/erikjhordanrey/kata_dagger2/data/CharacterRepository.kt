@@ -23,8 +23,8 @@ import javax.inject.Inject
 
 class CharacterRepository @Inject constructor(dataSource: DataSource) : Repository {
 
-  private val characters: List<Character> = dataSource.provideCharacterList()
+    private val characters: List<Character> = dataSource.provideCharacterList()
 
-  override val all: Observable<List<Character>>
-    get() = Observable.just(characters).delay(2000L, TimeUnit.MILLISECONDS)
+    override val all: Observable<List<Character>>
+        get() = Observable.just(characters).delay(2000L, TimeUnit.MILLISECONDS)
 }

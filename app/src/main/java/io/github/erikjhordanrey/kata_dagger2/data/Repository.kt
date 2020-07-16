@@ -5,5 +5,5 @@ import io.reactivex.Observable
 
 interface Repository {
 
-  val all: Observable<List<Character>>
+    val all: Observable<List<Character>>
 }

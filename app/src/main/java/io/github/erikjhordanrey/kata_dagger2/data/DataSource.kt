@@ -4,5 +4,5 @@ import io.github.erikjhordanrey.kata_dagger2.domain.model.Character
 
 interface DataSource {
 
-  fun provideCharacterList(): List<Character>
+    fun provideCharacterList(): List<Character>
 }
