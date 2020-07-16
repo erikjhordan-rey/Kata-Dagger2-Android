@@ -64,7 +64,7 @@ class MarioKartImage @JvmOverloads constructor(context: Context, attrs: Attribut
 
   public override fun onDraw(c: Canvas) {
     c.drawPath(hexagonBorderPath!!, mBorderPaint!!)
-    c.clipPath(hexagonPath!!, Region.Op.INTERSECT)
+    c.clipPath(hexagonPath!!)
     c.drawColor(Color.TRANSPARENT, PorterDuff.Mode.CLEAR)
     super.onDraw(c)
   }

@@ -1,6 +1,5 @@
 package io.github.erikcaffrey.kata_dagger2_mariokart
 
-
 import android.app.Application
 import io.github.erikcaffrey.kata_dagger2_mariokart.di.CharactersComponent
 import io.github.erikcaffrey.kata_dagger2_mariokart.di.CharactersModule

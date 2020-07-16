@@ -57,7 +57,7 @@ class CharacterFragment : Fragment() {
       cardView.cardElevation * CharacterAdapter.MAX_ELEVATION
     }
     button_name.setOnClickListener {
-      val position = Integer.parseInt(character.id) - 1
+      val position = Integer.parseInt(character.id.orEmpty()) - 1
       startActivity(CharacterDetailActivity.getCallingIntent(context!!, position))
     }
   }

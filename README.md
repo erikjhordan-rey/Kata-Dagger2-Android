@@ -1,20 +1,11 @@
-# Kata-Dagger2-MarioKart
+# Dagger2-Kata
 
-MarioKart Kata for Android Developers The main goal is to practice Dependency injection using Dagger 2.
-This example was created to support an article explanation [Dagger 2 Kata para android developers](https://erikcaffrey.github.io/ANDROID-kata-dagger2/) (spanish).
+MarioKart Kata for Android Developers is a Kata] (https://erikjhordan-rey.github.io/blog/2016/07/07/ANDROID-kata-dagger2.html) to practice Dependency injection using Dagger 2. (kata spanish).
 
-Libraries used on the sample project
-------------------------------------
-* [ButterKnife][1]
-* [RxJava & RxAndroid][2]
-* [Dagger 2][3]
 
 ## Screenshots
 
-
 ![](./art/mariokart.png)
-
-
 
 ## Demo
 
@@ -23,13 +14,13 @@ Libraries used on the sample project
 Do you want to contribute?
 --------------------------
 
-Feel free to report or add any useful feature, I will be glad to improve it with your help, before submitting your code please check the [codestyle](https://github.com/square/java-code-styles).
+Feel free to report or add any useful feature, I will be glad to improve it with your help.
 
 
 Developed By
 ------------
 
-* Erik Jhordan Rey  - <erikjhordan.rey@gmail.com>
+* Erik Jhordan Rey - <erikjhordan.rey@gmail.com>
 
 License
 -------
