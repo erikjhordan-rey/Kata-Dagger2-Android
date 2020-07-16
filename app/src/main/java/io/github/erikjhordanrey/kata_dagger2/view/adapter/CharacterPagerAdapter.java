@@ -19,7 +19,7 @@ public class CharacterPagerAdapter extends FragmentStatePagerAdapter implements 
     private float elevation;
 
     public CharacterPagerAdapter(FragmentManager fm) {
-        super(fm);
+        super(fm, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
         characterList = new ArrayList<>();
     }
 
@@ -46,7 +46,7 @@ public class CharacterPagerAdapter extends FragmentStatePagerAdapter implements 
 
     @NotNull
     @Override
-    public Object instantiateItem(ViewGroup container, int position) {
+    public Object instantiateItem(@NotNull ViewGroup container, int position) {
         Object fragment = super.instantiateItem(container, position);
         characterList.set(position, (CharacterFragment) fragment);
         return fragment;

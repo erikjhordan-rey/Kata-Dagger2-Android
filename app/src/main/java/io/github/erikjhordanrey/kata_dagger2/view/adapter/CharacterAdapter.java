@@ -4,11 +4,11 @@ import androidx.cardview.widget.CardView;
 
 public interface CharacterAdapter {
 
-  int MAX_ELEVATION = 8;
+    int MAX_ELEVATION = 8;
 
-  float getElevation();
+    float getElevation();
 
-  CardView getCardViewAt(int position);
+    CardView getCardViewAt(int position);
 
-  int getCount();
+    int getCount();
 }

@@ -22,22 +22,22 @@ import android.util.AttributeSet
 import androidx.appcompat.widget.AppCompatTextView
 
 class MarioKartLabel @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) :
-    AppCompatTextView(context, attrs, defStyleAttr) {
+        AppCompatTextView(context, attrs, defStyleAttr) {
 
-  init {
-    init(context)
-  }
+    init {
+        init(context)
+    }
 
-  private fun init(context: Context) {
-    this.typeface = getMarioKartTypeFace(context)
-  }
+    private fun init(context: Context) {
+        this.typeface = getMarioKartTypeFace(context)
+    }
 
-  private fun getMarioKartTypeFace(context: Context): Typeface {
-    return Typeface.createFromAsset(context.assets, SUPER_MARIO_FONT)
-  }
+    private fun getMarioKartTypeFace(context: Context): Typeface {
+        return Typeface.createFromAsset(context.assets, SUPER_MARIO_FONT)
+    }
 
-  companion object {
+    companion object {
 
-    private const val SUPER_MARIO_FONT = "SuperMario256.ttf"
-  }
+        private const val SUPER_MARIO_FONT = "SuperMario256.ttf"
+    }
 }
