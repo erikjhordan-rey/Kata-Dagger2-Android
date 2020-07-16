@@ -4,7 +4,7 @@ import android.content.Context
 
 object UIUtils {
 
-  fun transformDpToPixels(dp: Int, context: Context): Float {
-    return dp * context.resources.displayMetrics.density
-  }
+    fun transformDpToPixels(dp: Int, context: Context): Float {
+        return dp * context.resources.displayMetrics.density
+    }
 }

@@ -7,81 +7,87 @@ import android.graphics.Paint
 import android.graphics.Path
 import android.graphics.PorterDuff
 import android.util.AttributeSet
-import android.view.View
 import androidx.appcompat.widget.AppCompatImageView
+import kotlin.math.sqrt
 
 class MarioKartImage @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) :
-    AppCompatImageView(context, attrs, defStyleAttr) {
+        AppCompatImageView(context, attrs, defStyleAttr) {
 
-  private var hexagonPath: Path? = null
-  private var hexagonBorderPath: Path? = null
-  private var mBorderPaint: Paint? = null
+    private var hexagonPath: Path? = null
+    private var hexagonBorderPath: Path? = null
+    private var mBorderPaint: Paint? = null
 
-  init {
-    init()
-  }
-  private fun init() {
-    this.hexagonPath = Path()
-    this.hexagonBorderPath = Path()
+    init {
+        init()
+    }
 
-    this.mBorderPaint = Paint()
-    this.mBorderPaint!!.color = Color.WHITE
-    this.mBorderPaint!!.strokeCap = Paint.Cap.ROUND
-    this.mBorderPaint!!.strokeWidth = 20f
-    this.mBorderPaint!!.style = Paint.Style.STROKE
-  }
+    private fun init() {
+        this.hexagonPath = Path()
+        this.hexagonBorderPath = Path()
 
-  private fun calculatePath(radius: Float) {
-    val halfRadius = radius / 2f
-    val triangleHeight = (Math.sqrt(3.0) * halfRadius).toFloat()
-    val centerX = measuredWidth / 2f
-    val centerY = measuredHeight / 2f
+        this.mBorderPaint = Paint().apply {
+            color = Color.WHITE
+            strokeCap = Paint.Cap.ROUND
+            strokeWidth = 20f
+            style = Paint.Style.STROKE
+        }
+    }
 
-    this.hexagonPath!!.reset()
-    this.hexagonPath!!.moveTo(centerX, centerY + radius)
-    this.hexagonPath!!.lineTo(centerX - triangleHeight, centerY + halfRadius)
-    this.hexagonPath!!.lineTo(centerX - triangleHeight, centerY - halfRadius)
-    this.hexagonPath!!.lineTo(centerX, centerY - radius)
-    this.hexagonPath!!.lineTo(centerX + triangleHeight, centerY - halfRadius)
-    this.hexagonPath!!.lineTo(centerX + triangleHeight, centerY + halfRadius)
-    this.hexagonPath!!.close()
+    public override fun onDraw(canvas: Canvas) {
+        if (hexagonBorderPath != null && mBorderPaint != null) canvas.drawPath(hexagonBorderPath!!, mBorderPaint!!)
+        hexagonPath?.run { canvas.clipPath(this) }
+        canvas.drawColor(Color.TRANSPARENT, PorterDuff.Mode.CLEAR)
+        super.onDraw(canvas)
+    }
 
-    val radiusBorder = radius - 5f
-    val halfRadiusBorder = radiusBorder / 2f
-    val triangleBorderHeight = (Math.sqrt(3.0) * halfRadiusBorder).toFloat()
+    public override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
+        super.onMeasure(widthMeasureSpec, heightMeasureSpec)
+        val width = MeasureSpec.getSize(widthMeasureSpec)
+        val height = MeasureSpec.getSize(heightMeasureSpec)
+        setMeasuredDimension(width, height)
+        calculatePath((width / 2f).coerceAtMost(height / 2f) - 10f)
+    }
 
-    this.hexagonBorderPath!!.reset()
-    this.hexagonBorderPath!!.moveTo(centerX, centerY + radiusBorder)
-    this.hexagonBorderPath!!.lineTo(centerX - triangleBorderHeight, centerY + halfRadiusBorder)
-    this.hexagonBorderPath!!.lineTo(centerX - triangleBorderHeight, centerY - halfRadiusBorder)
-    this.hexagonBorderPath!!.lineTo(centerX, centerY - radiusBorder)
-    this.hexagonBorderPath!!.lineTo(centerX + triangleBorderHeight, centerY - halfRadiusBorder)
-    this.hexagonBorderPath!!.lineTo(centerX + triangleBorderHeight, centerY + halfRadiusBorder)
-    this.hexagonBorderPath!!.close()
-    invalidate()
-  }
+    fun setRadius(radius: Float) {
+        calculatePath(radius)
+    }
 
-  public override fun onDraw(c: Canvas) {
-    c.drawPath(hexagonBorderPath!!, mBorderPaint!!)
-    c.clipPath(hexagonPath!!)
-    c.drawColor(Color.TRANSPARENT, PorterDuff.Mode.CLEAR)
-    super.onDraw(c)
-  }
+    fun setBorderColor(color: Int) {
+        this.mBorderPaint!!.color = color
+        invalidate()
+    }
 
-  public override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
-    super.onMeasure(widthMeasureSpec, heightMeasureSpec)
-    val width = View.MeasureSpec.getSize(widthMeasureSpec)
-    val height = View.MeasureSpec.getSize(heightMeasureSpec)
-    setMeasuredDimension(width, height)
-    calculatePath(Math.min(width / 2f, height / 2f) - 10f)
-  }
+    private fun calculatePath(radius: Float) {
+        val halfRadius = radius / 2f
+        val triangleHeight = (sqrt(3.0) * halfRadius).toFloat()
+        val centerX = measuredWidth / 2f
+        val centerY = measuredHeight / 2f
 
-  fun setRadius(radius: Float) {
-    calculatePath(radius)
-  }
+        this.hexagonPath?.apply {
+            reset()
+            moveTo(centerX, centerY + radius)
+            lineTo(centerX - triangleHeight, centerY + halfRadius)
+            lineTo(centerX - triangleHeight, centerY - halfRadius)
+            lineTo(centerX, centerY - radius)
+            lineTo(centerX + triangleHeight, centerY - halfRadius)
+            lineTo(centerX + triangleHeight, centerY + halfRadius)
+            close()
+        }
 
-  fun setBorderColor(color: Int) {
-    this.mBorderPaint!!.color = color
-    invalidate()
-  }
+        val radiusBorder = radius - 5f
+        val halfRadiusBorder = radiusBorder / 2f
+        val triangleBorderHeight = (sqrt(3.0) * halfRadiusBorder).toFloat()
+
+        this.hexagonBorderPath?.apply {
+            reset()
+            moveTo(centerX, centerY + radiusBorder)
+            lineTo(centerX - triangleBorderHeight, centerY + halfRadiusBorder)
+            lineTo(centerX - triangleBorderHeight, centerY - halfRadiusBorder)
+            lineTo(centerX, centerY - radiusBorder)
+            lineTo(centerX + triangleBorderHeight, centerY - halfRadiusBorder)
+            lineTo(centerX + triangleBorderHeight, centerY + halfRadiusBorder)
+            close()
+        }
+        invalidate()
+    }
 }
