@@ -21,78 +21,71 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import io.github.erikjhordanrey.kata_dagger2.R
 import io.github.erikjhordanrey.kata_dagger2.App
+import io.github.erikjhordanrey.kata_dagger2.databinding.ActivityDetailCharacterBinding
 import io.github.erikjhordanrey.kata_dagger2.domain.model.Character
 import io.github.erikjhordanrey.kata_dagger2.view.adapter.CharacterDetailPagerAdapter
 import io.github.erikjhordanrey.kata_dagger2.view.fragment.CharacterDetailFragment
 import io.github.erikjhordanrey.kata_dagger2.view.fragment.CharacterFragment
 import io.github.erikjhordanrey.kata_dagger2.view.presenter.CharactersPresenter
-import kotlinx.android.synthetic.main.activity_characters.toolbar
-import kotlinx.android.synthetic.main.activity_detail_character.pager
-import kotlinx.android.synthetic.main.activity_detail_character.progress_character_detail
 import javax.inject.Inject
 
 class CharacterDetailActivity : AppCompatActivity(), CharactersPresenter.View {
 
-  private lateinit var adapter: CharacterDetailPagerAdapter
-  @Inject lateinit var presenter: CharactersPresenter
+    private lateinit var adapter: CharacterDetailPagerAdapter
 
-  override fun onCreate(savedInstanceState: Bundle?) {
-    super.onCreate(savedInstanceState)
-    setContentView(R.layout.activity_detail_character)
-    initializeDagger()
-    initializeToolbar()
-    initializeAdapter()
-    presenter.view = this
-    presenter.initialize()
-  }
+    private lateinit var binding: ActivityDetailCharacterBinding
 
+    @Inject
+    lateinit var presenter: CharactersPresenter
 
-  override fun showCharacters(characters: List<Character>) {
-    for (character in characters) {
-      val characterFragment = CharacterDetailFragment.newInstance(character)
-      adapter.addCharacter(characterFragment)
-      adapter.notifyDataSetChanged()
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        binding = ActivityDetailCharacterBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        initializeDagger()
+        initializeAdapter()
+        presenter.view = this
+        presenter.initialize()
     }
 
-    pager.currentItem = intent.getIntExtra(CharacterFragment.EXTRA_CHARACTER_POSITION, DEFAULT_POSITION)
-    pager.visibility = View.VISIBLE
-  }
 
-  override fun hideLoading() {
-    pager.visibility = View.VISIBLE
-    progress_character_detail.visibility = View.GONE
-  }
+    override fun showCharacters(characters: List<Character>) {
+        for (character in characters) {
+            val characterFragment = CharacterDetailFragment.newInstance(character)
+            adapter.addCharacter(characterFragment)
+            adapter.notifyDataSetChanged()
+        }
 
-  private fun initializeDagger() {
-    val app = application as App
-    app.charactersComponent.inject(this)
-  }
-
-  private fun initializeToolbar() {
-    setSupportActionBar(toolbar)
-    val actionBar = supportActionBar
-
-    actionBar?.run {
-      setDisplayShowTitleEnabled(true)
-      setDisplayHomeAsUpEnabled(true)
+        binding.pager.run {
+            currentItem = intent.getIntExtra(CharacterFragment.EXTRA_CHARACTER_POSITION, DEFAULT_POSITION)
+            visibility = View.VISIBLE
+        }
     }
-  }
 
-  private fun initializeAdapter() {
-    adapter = CharacterDetailPagerAdapter(supportFragmentManager)
-    pager?.adapter = adapter
-  }
-
-  companion object {
-
-    private const val DEFAULT_POSITION = 0
-
-    fun getCallingIntent(context: Context, position: Int): Intent {
-      val intent = Intent(context, CharacterDetailActivity::class.java)
-      intent.putExtra(CharacterFragment.EXTRA_CHARACTER_POSITION, position)
-      return intent
+    override fun hideLoading() {
+        binding.pager.visibility = View.VISIBLE
+        binding.progressCharacterDetail.visibility = View.GONE
     }
-  }
+
+    private fun initializeDagger() {
+        val app = application as App
+        app.charactersComponent.inject(this)
+    }
+
+    private fun initializeAdapter() {
+        adapter = CharacterDetailPagerAdapter(supportFragmentManager)
+        binding.pager.adapter = adapter
+    }
+
+    companion object {
+
+        private const val DEFAULT_POSITION = 0
+
+        fun getCallingIntent(context: Context, position: Int): Intent {
+            val intent = Intent(context, CharacterDetailActivity::class.java)
+            intent.putExtra(CharacterFragment.EXTRA_CHARACTER_POSITION, position)
+            return intent
+        }
+    }
 }

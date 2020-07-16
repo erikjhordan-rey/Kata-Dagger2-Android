@@ -22,57 +22,53 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.cardview.widget.CardView
 import androidx.fragment.app.Fragment
-import io.github.erikjhordanrey.kata_dagger2.R
+import io.github.erikjhordanrey.kata_dagger2.databinding.FragmentCharacterBinding
 import io.github.erikjhordanrey.kata_dagger2.domain.model.Character
 import io.github.erikjhordanrey.kata_dagger2.view.activity.CharacterDetailActivity
 import io.github.erikjhordanrey.kata_dagger2.view.adapter.CharacterAdapter
-import kotlinx.android.synthetic.main.fragment_character.button_name
-import kotlinx.android.synthetic.main.fragment_character.cardView
-import kotlinx.android.synthetic.main.fragment_character.image_profile
-import kotlinx.android.synthetic.main.fragment_character.label_position
 
 class CharacterFragment : Fragment() {
 
-  private val character: Character
-    get() = arguments?.getSerializable(EXTRA_CHARACTER) as Character
+    private val character: Character
+        get() = arguments?.getSerializable(EXTRA_CHARACTER) as Character
 
-  lateinit  var characterCardView: CardView
-  override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-      savedInstanceState: Bundle?): View? {
-    return inflater.inflate(R.layout.fragment_character, container, false)
-  }
+    lateinit var characterCardView: CardView
 
-  override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-    super.onViewCreated(view, savedInstanceState)
-    this.characterCardView = cardView
-    val character = character
-    renderCharacter(character)
-  }
+    private lateinit var binding: FragmentCharacterBinding
 
-  private fun renderCharacter(character: Character) {
-    button_name.text = character.name
-    image_profile.setImageResource(character.photo)
-    label_position.text = character.id
-    cardView.maxCardElevation = cardView?.cardElevation.let {
-      cardView.cardElevation * CharacterAdapter.MAX_ELEVATION
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        binding = FragmentCharacterBinding.inflate(inflater, container, false)
+        return binding.root
     }
-    button_name.setOnClickListener {
-      val position = Integer.parseInt(character.id.orEmpty()) - 1
-      startActivity(CharacterDetailActivity.getCallingIntent(context!!, position))
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        this.characterCardView = binding.cardView
+        val character = character
+        renderCharacter(character)
     }
-  }
 
-  companion object {
+    private fun renderCharacter(character: Character) {
+        binding.buttonName.text = character.name
+        binding.imageProfile.setImageResource(character.photo)
+        binding.labelPosition.text = character.id
+        binding.cardView.maxCardElevation = binding.cardView.cardElevation * CharacterAdapter.MAX_ELEVATION
 
-    const val EXTRA_CHARACTER_POSITION = "character_position"
-    const val EXTRA_CHARACTER = "character"
-
-    fun newInstance(character: Character): CharacterFragment {
-      val characterFragment = CharacterFragment()
-      val bundle = Bundle()
-      bundle.putSerializable(EXTRA_CHARACTER, character)
-      characterFragment.arguments = bundle
-      return characterFragment
+        binding.buttonName.setOnClickListener {
+            val position = Integer.parseInt(character.id.orEmpty()) - 1
+            startActivity(CharacterDetailActivity.getCallingIntent(requireContext(), position))
+        }
     }
-  }
+
+    companion object {
+
+        const val EXTRA_CHARACTER_POSITION = "character_position"
+        const val EXTRA_CHARACTER = "character"
+
+        fun newInstance(character: Character) = CharacterFragment().apply {
+            val bundle = Bundle()
+            bundle.putSerializable(EXTRA_CHARACTER, character)
+            arguments = bundle
+        }
+    }
 }
