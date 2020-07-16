@@ -34,7 +34,7 @@ class MarioKartTransformer(private val pager: ViewPager,
             realOffset = positionOffset
         }
 
-        if (nextPosition > characterAdapter.count - 1 || realCurrentPosition > characterAdapter.count - 1) {
+        if (nextPosition > characterAdapter.getCount() - 1 || realCurrentPosition > characterAdapter.getCount() - 1) {
             return
         }
 
