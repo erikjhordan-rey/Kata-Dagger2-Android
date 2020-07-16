@@ -29,19 +29,9 @@ class CharacterDetailFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initializeToolbar()
-        Log.d("Data", character.name.orEmpty())
         bind(character)
     }
 
-    override fun onStart() {
-        super.onStart()
-        Log.d("Data", "start" +  character.name)
-    }
-
-    override fun onResume() {
-        super.onResume()
-        Log.d("Data", "resume" +  character.name)
-    }
     private fun initializeToolbar() {
         (activity as AppCompatActivity).setSupportActionBar(binding.toolbar)
         val actionBar = (activity as AppCompatActivity).supportActionBar
