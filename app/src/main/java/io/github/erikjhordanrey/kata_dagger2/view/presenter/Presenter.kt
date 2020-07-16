@@ -16,17 +16,17 @@
 
 package io.github.erikjhordanrey.kata_dagger2.view.presenter
 
-open class Presenter<T : Presenter.View> {
+abstract class Presenter<T : Presenter.View> {
 
-  var view: T? = null
+    var view: T? = null
 
-  open fun initialize() {
+    open fun initialize() {
 
-  }
+    }
 
-  open fun terminate() {
+    open fun terminate() {
 
-  }
+    }
 
-  interface View
+    interface View
 }

@@ -23,34 +23,34 @@ import javax.inject.Inject
 
 class CharactersPresenter @Inject constructor(private val getCharacters: GetCharacters) : Presenter<CharactersPresenter.View>() {
 
-  override fun initialize() {
-    super.initialize()
-    this.getCharacters.execute(GetCharacterListObserver())
-  }
-
-  override fun terminate() {
-    super.terminate()
-    getCharacters.dispose()
-    view = null
-  }
-
-  private inner class GetCharacterListObserver : UseCaseObserver<List<Character>>() {
-
-    override fun onComplete() {
-      super.onComplete()
-      view?.hideLoading()
+    override fun initialize() {
+        super.initialize()
+        this.getCharacters.execute(GetCharacterListObserver())
     }
 
-    override fun onNext(t: List<Character>) {
-      super.onNext(t)
-      view?.showCharacters(t)
+    override fun terminate() {
+        super.terminate()
+        getCharacters.dispose()
+        view = null
     }
-  }
 
-  interface View : Presenter.View {
+    private inner class GetCharacterListObserver : UseCaseObserver<List<Character>>() {
 
-    fun showCharacters(characters: List<Character>)
+        override fun onComplete() {
+            super.onComplete()
+            view?.hideLoading()
+        }
 
-    fun hideLoading()
-  }
+        override fun onNext(t: List<Character>) {
+            super.onNext(t)
+            view?.showCharacters(t)
+        }
+    }
+
+    interface View : Presenter.View {
+
+        fun showCharacters(characters: List<Character>)
+
+        fun hideLoading()
+    }
 }
